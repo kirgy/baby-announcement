@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
+import { Container as NesContainer, Button} from "nes-react";
+import '../App.css';
+import {
+    BrowserRouter as Router,
+    Link
+} from "react-router-dom";
 
 export default function Wedding() {
   return (
     <div>
-        <h1>
-            Wedding!
-        </h1>
-        <i class="nes-charmander"></i>
-        <i class="nes-squirtle"></i>
+        <i className="nes-charmander"></i>
+        <i className="nes-squirtle"></i>
+
+        <NesContainer title="2014">
+            <p>
+                We met with friends and family, and said "I do"
+            </p>
+        </NesContainer>
+        <Link to="/house">
+            <Button primary="true">
+                Next
+            </Button>
+        </Link>
     </div>
   )
 }
