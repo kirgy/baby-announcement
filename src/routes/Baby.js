@@ -6,7 +6,7 @@ import {
     Link
 } from "react-router-dom";
 import moment from "moment";
-
+import Typist from 'react-typist';
 
 export default class Baby extends Component {
     constructor(props) {
@@ -158,9 +158,9 @@ function stageIntro(state) {
     }
 
     return (
-        <p>
+        <Typist>
             ...and now...
-        </p>    
+        </Typist>
     )
 }
 
@@ -172,9 +172,9 @@ function stageLoading(state) {
     return (
         <div>
             <progress className="nes-progress is-primary" value={state.barPosition} max="100" style={{"transition" : "width 2s ease"}}></progress>
-            {(state.textVisible) ? (<p>
-                Loading...
-            </p>) : ''}
+            {(state.textVisible) ? (<Typist>
+                Calculating time remaining...
+            </Typist>) : ''}
         </div>
     )
 }
@@ -187,6 +187,6 @@ function stageEgg(state, dueInDays) {
     return (
         <p>
             {dueInDays} days remaining...
-        </p>    
+        </p>
     )
 }

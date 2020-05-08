@@ -16,35 +16,67 @@ import Baby from "./routes/Baby";
 
 
 class App extends Component {
+
+  state = {
+    devMenuOpen: false
+  }
+
   render() {
     return (
       <div className="App">
-        <NesContainer>
-          <Router>
+        <Router>
+          <div style={{
+              position: "fixed",
+              top: 0,
+              right: 0,
+              "text-align": "right"
+            }}>
+            <button onClick={() => {this.setState({devMenuOpen: !this.state.devMenuOpen})}}>
+              {this.state.devMenuOpen ? '=' : 'X'}
+            </button>
             <div>
-              <nav>
-                <ul>
-                  <li>
-                    <Link to="/">Welcome</Link>
-                  </li>
-                  <li>
-                    <Link to="/meet">Meet</Link>
-                  </li>
-                  <li>
-                    <Link to="/engagement">Engagement</Link>
-                  </li>
-                  <li>
-                    <Link to="/wedding">Wedding</Link>
-                  </li>
-                  <li>
-                    <Link to="/house">House</Link>
-                  </li>                    
-                  <li>
-                    <Link to="/now">Now</Link>
-                  </li>                                  
-                </ul>
-              </nav>
+                  <nav style={{
+                    display: this.state.devMenuOpen ? '' : 'none'
+                  }}>
+                    <ul>
+                      <li>
+                        <Link to="/">Welcome</Link>
+                      </li>
+                      <li>
+                        <Link to="/meet">Meet</Link>
+                      </li>
+                      <li>
+                        <Link to="/engagement">Engagement</Link>
+                      </li>
+                      <li>
+                        <Link to="/wedding">Wedding</Link>
+                      </li>
+                      <li>
+                        <Link to="/house">House</Link>
+                      </li>                    
+                      <li>
+                        <Link to="/now">Now</Link>
+                      </li>                                  
+                    </ul>
+                  </nav>
+                                       
+            </div>
+          </div>
 
+          <div style={{
+            position: "absolute",
+            top: "50%",
+            "-ms-transform": "translateY(-50%)",
+            transform: "translateY(-50%)",
+            left: 0,
+            overflow: "hidden",
+            width: "100%",
+            padding: "2em 1em",
+          }}>
+            <div style={{
+              "max-width": "750px",
+              margin: "0 auto",
+            }}>
               <Switch>
                 <Route path="/about">
                   <About />
@@ -70,11 +102,10 @@ class App extends Component {
                 <Route path="/">
                   <Home />
                 </Route>
-              </Switch>
+              </Switch>  
             </div>
-          </Router>
-
-        </NesContainer>
+          </div>
+        </Router>
       </div>
     );
   }

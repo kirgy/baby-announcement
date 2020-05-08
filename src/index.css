@@ -3,3 +3,82 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 100ms ease-in;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+img.pokeFade {
+  animation: pokeFadeOut 1s;
+  opacity: 0;
+}
+
+.Typist {
+  text-align: left;
+}
+
+
+@keyframes pokeFadeOut {
+  0% {
+    filter: contrast(1) brightness(1);
+    opacity: 1;
+  }
+
+  24% {
+    filter: contrast(1) brightness(1);
+    opacity: 1;
+  }  
+  25% {
+    filter: contrast(0.5) brightness(1.5);
+    opacity: 0.75;
+  }
+
+
+  49% {
+    filter: contrast(0.5) brightness(1.5);
+    opacity: 0.75;
+  }  
+  50% {
+    filter: contrast(0.25) brightness(2);
+    opacity: 0.5;
+  }
+
+
+  74% {
+    filter: contrast(0.25) brightness(2);
+    opacity: 0.5;
+  }  
+  75% {
+    filter: contrast(0.175) brightness(2);
+    opacity: 0.25;
+  }  
+
+  94% {
+    filter: contrast(0.175) brightness(2);
+    opacity: 0.25;
+  }
+  95% {
+    filter: contrast(0) brightness(3);
+    opacity: 0;
+  }
+}
