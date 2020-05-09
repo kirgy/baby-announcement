@@ -52,18 +52,29 @@ export default function Wedding() {
             />
         </div>
 
-        <img src={Couple} />
+        <div style={{
+            padding: "2em"
+        }}>
+            <img src={Couple} />
+        </div>
 
         <NesContainer title="2014">
             <p>
                 We met with friends and family, and said "I do"
             </p>
         </NesContainer>
-        <Link to="/house">
-            <Button primary="true">
-                Next
-            </Button>
-        </Link>
+        <div style={{
+            "text-align": "right",
+            "padding-top": "1em"
+        }}>
+            <Link to="/house">
+                <Button primary="true" style={{
+                    "margin-right":  "right"
+                }}>
+                    Next
+                </Button>
+            </Link>
+        </div>
     </div>
   )
 }

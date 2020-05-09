@@ -13,7 +13,7 @@ import Engagement from "./routes/Engagement";
 import Wedding from "./routes/Wedding";
 import House from "./routes/House";
 import Baby from "./routes/Baby";
-
+import Background from "./images/background.png";
 
 class App extends Component {
 
@@ -23,7 +23,22 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{
+        position: "absolute",
+        left: 0,
+        top: 0,
+        width: "100%",
+        height: "100%",
+      }}>
+        <div style={{
+          // backgroundImage: `url(${Background})`,
+          left: 0,
+          top: 0,
+          width: "100%",
+          height: "100%",
+          backgroundSize: "cover",
+          opacity: 0.2
+        }}></div>
         <Router>
           <div style={{
               position: "fixed",
@@ -40,7 +55,7 @@ class App extends Component {
                   }}>
                     <ul>
                       <li>
-                        <Link to="/">Welcome</Link>
+                        <Link to="/">Meet</Link>
                       </li>
                       <li>
                         <Link to="/meet">Meet</Link>
@@ -100,7 +115,7 @@ class App extends Component {
                   <Baby />
                 </Route>                                                                
                 <Route path="/">
-                  <Home />
+                  <Meet />
                 </Route>
               </Switch>  
             </div>
@@ -109,10 +124,6 @@ class App extends Component {
       </div>
     );
   }
-}
-
-function Home() {
-  return <h2>Home</h2>;
 }
 
 function About() {

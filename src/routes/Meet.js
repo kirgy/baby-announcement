@@ -9,6 +9,8 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import DelayLink from 'react-delay-link';
 import Chris from "../components/Chris";
 import Lucy from "../components/Lucy";
+import Couple from "../images/Meet/couple-meet.png";
+import Spark from "../images/Meet/spark.png";
 
 export default class Meet extends Component {
     constructor(props) {
@@ -32,30 +34,34 @@ export default class Meet extends Component {
 
     render() {
         return (
-          <div>
-            <CSSTransitionGroup
-            transitionName="example"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}>
-                {(this.state.showChars === true)
-                    ? <div className="row">
-                        <div className="col-4">
-                            <Chris fadeOut={this.state.fadeOut}/>
-                        </div>
-                        <div className="col-4">
-                        </div>
-                        <div className="col-4">
-                            <Lucy fadeOut={this.state.fadeOut}/>
-                        </div>
-                    </div>
-                    : ''}
-            </CSSTransitionGroup>
-            <DelayLink delay={3000} to="/engagement" replace={false} clickAction={(context) => this.navAction(context)}>
-                <Button primary="true" >
-                    Next
-                </Button>
-            </DelayLink>
-          </div>
+            <div style={{
+                padding: "2em"
+            }}>
+                <div style={{
+                    position: "relative"
+                }}>
+                    <img src={Couple} className="couple" />
+                    <img src={Spark} className="spark" />
+                </div>
+
+                <NesContainer title="2014">
+                    <p>
+                        We met with friends and family, and said "I do"
+                    </p>
+                </NesContainer>
+                <div style={{
+                    "text-align": "right",
+                    "padding-top": "1em"
+                }}>
+                    <Link to="/house">
+                        <Button primary="true" style={{
+                            "margin-right":  "right"
+                        }}>
+                            Next
+                        </Button>
+                    </Link>
+                </div>                
+            </div>
         );
       }
     }

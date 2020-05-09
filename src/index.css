@@ -82,3 +82,46 @@ img.pokeFade {
     opacity: 0;
   }
 }
+
+
+
+/**
+* Meet
+*/
+
+.couple {
+  width: 100%;
+}
+
+.spark {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: animateSpark 4s;
+    opacity: 1;
+    top: 0;
+    left: 0;
+}
+
+@keyframes animateSpark {
+  0% {
+    opacity: 1;
+    left: 72%;
+    top: 103%;
+  }
+
+  20% {
+    left: 72%;
+    top: 110.8%;
+  }
+
+  80% {
+    left: 98.9%;
+    top: 110.8%;
+  }
+
+  100% {
+    opacity: 1;
+    left: 98.9%;
+    top: 103%;
+  }  
+}
