@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container as NesContainer, Button} from "nes-react";
-import '../App.css';
+import '../sass/App.css';
 import {
     BrowserRouter as Router,
     Link
@@ -44,7 +44,7 @@ export default class Meet extends Component {
                     <img src={Spark} className="spark" />
                 </div>
 
-                <NesContainer title="2014">
+                <NesContainer title="2014" className="text-caption">
                     <p>
                         We met with friends and family, and said "I do"
                     </p>

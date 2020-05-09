@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container as NesContainer, Button} from "nes-react";
-import '../App.css';
+import '../sass/App.css';
 import {
     BrowserRouter as Router,
     Link

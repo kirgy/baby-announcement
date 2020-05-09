@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './sass/App.css';
 import { Container as NesContainer} from "nes-react";
 import {
   BrowserRouter as Router,
@@ -54,9 +54,6 @@ class App extends Component {
                     display: this.state.devMenuOpen ? '' : 'none'
                   }}>
                     <ul>
-                      <li>
-                        <Link to="/">Meet</Link>
-                      </li>
                       <li>
                         <Link to="/meet">Meet</Link>
                       </li>
