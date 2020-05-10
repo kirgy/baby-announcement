@@ -1,0 +1,77 @@
+/**
+  * Meet
+  */
+.scene-meet .couple {
+  width: 100%; }
+
+.scene-meet .spark {
+  opacity: 0;
+  left: 85.1%;
+  top: 116%; }
+
+.scene-meet .spark.animate {
+  animation: animateSpark 4s; }
+
+.scene-meet .monitor {
+  opacity: 0;
+  left: 50%;
+  top: 50.1%; }
+
+.scene-meet .monitor.animate {
+  animation: animateMonitors 4s forwards; }
+
+@keyframes animateSpark {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  25.1% {
+    opacity: 1;
+    left: 85.1%;
+    top: 116%; }
+  26% {
+    left: 85.1%;
+    top: 123.3%; }
+  60% {
+    left: 112%;
+    top: 123.3%; }
+  80% {
+    opacity: 1;
+    left: 112%;
+    top: 116%; }
+  99% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    left: 112%;
+    top: 116%; } }
+
+@keyframes animateMonitors {
+  0% {
+    opacity: 0; }
+  5% {
+    opacity: 1; }
+  10% {
+    opacity: 0; }
+  15% {
+    opacity: 1; }
+  24% {
+    opacity: 1; }
+  25% {
+    opacity: 0;
+    left: 50%; }
+  79% {
+    opacity: 0;
+    left: 89%; }
+  80% {
+    opacity: 1;
+    left: 89%; }
+  85% {
+    opacity: 0; }
+  90% {
+    opacity: 1; }
+  95% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    left: 89%; } }

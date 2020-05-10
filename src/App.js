@@ -13,6 +13,7 @@ import Engagement from "./routes/Engagement";
 import Wedding from "./routes/Wedding";
 import House from "./routes/House";
 import Baby from "./routes/Baby";
+// import ErrorNotFound from "./routes/404";
 import Background from "./images/background.png";
 
 class App extends Component {
@@ -68,7 +69,10 @@ class App extends Component {
                       </li>                    
                       <li>
                         <Link to="/now">Now</Link>
-                      </li>                                  
+                      </li>
+                      <li>
+                        <Link to="/404">404</Link>
+                      </li>                      
                     </ul>
                   </nav>
                                        
@@ -113,7 +117,10 @@ class App extends Component {
                 </Route>                                                                
                 <Route path="/">
                   <Meet />
-                </Route>
+                </Route>                                      
+                {/* <Route path="/404">
+                  <ErrorNotFound />
+                </Route>                 */}
               </Switch>  
             </div>
           </div>

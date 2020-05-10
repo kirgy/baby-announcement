@@ -9,11 +9,13 @@
     "react": "^16.13.1",
     "react-confetti": "^5.0.1",
     "react-delay-link": "^1.1.4",
+    "react-dinosaur-game": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "0.9.x",
     "react-transition-group": "^1.2.1",
-    "react-typist": "^2.0.5"
+    "react-typist": "^2.0.5",
+    "url-loader": "^4.1.0"
   },
   "devDependencies": {
     "node-sass": "^4.14.1",

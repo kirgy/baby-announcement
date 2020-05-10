@@ -11,19 +11,31 @@ import Chris from "../components/Chris";
 import Lucy from "../components/Lucy";
 import Couple from "../images/Meet/couple-meet.png";
 import Spark from "../images/Meet/spark.png";
+import Monitor from "../images/Meet/monitor-heart.png";
 
 export default class Meet extends Component {
     constructor(props) {
         super(props);
         this.state = {
             showChars: false,
-            fadeOut: false
+            fadeOut: false,
+            stageReady: false
         };
     }
 
     componentDidMount() {
-        this.setState({showChars:true})
+        this.setState({showChars:true});
+        this.setStageReady();
     }
+
+    setStageReady() {
+        let context = this;
+        setTimeout(() => {
+            context.setState({
+                stageReady: true
+            });
+        }, 2000);
+    }    
     
     navAction() {
         this.setState({
@@ -36,12 +48,13 @@ export default class Meet extends Component {
         return (
             <div style={{
                 padding: "2em"
-            }}>
+            }} className="scene-meet">
                 <div style={{
-                    position: "relative"
-                }}>
-                    <img src={Couple} className="couple" />
-                    <img src={Spark} className="spark" />
+                    position: "relative",
+                }} className={this.state.showChars ? "pokeFadeIn" : ""}>
+                    <img src={Couple} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
+                    <img src={Spark} className={"scene-animatable spark "+(this.state.stageReady ? "animate" : "")} />
+                    <img src={Monitor} className={"scene-animatable monitor "+(this.state.stageReady ? "animate" : "")} />
                 </div>
 
                 <NesContainer title="2014" className="text-caption">
@@ -53,7 +66,7 @@ export default class Meet extends Component {
                     "text-align": "right",
                     "padding-top": "1em"
                 }}>
-                    <Link to="/house">
+                    <Link to="/engagement">
                         <Button primary="true" style={{
                             "margin-right":  "right"
                         }}>

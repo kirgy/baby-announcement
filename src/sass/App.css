@@ -1,32 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif; }
-
-.example-enter {
-  opacity: 0.01; }
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 1000ms ease-in; }
-
-.example-leave {
-  opacity: 1; }
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 100ms ease-in; }
-
-img {
-  max-width: 100%; }
-
-img.pokeFade {
-  animation: pokeFadeOut 1s;
-  opacity: 0; }
-
-.Typist {
-  text-align: left; }
-
 @keyframes pokeFadeOut {
   0% {
     filter: contrast(1) brightness(1);
@@ -56,38 +27,168 @@ img.pokeFade {
     filter: contrast(0) brightness(3);
     opacity: 0; } }
 
-/**
-  * All scenes
-  */
-.nes-container.text-caption {
-  margin-top: 2em; }
+@keyframes pokeFadeIn {
+  0% {
+    filter: contrast(0) brightness(3);
+    opacity: 0; }
+  24% {
+    filter: contrast(0.175) brightness(2);
+    opacity: 0.25; }
+  25% {
+    filter: contrast(0.175) brightness(2);
+    opacity: 0.25; }
+  49% {
+    filter: contrast(0.25) brightness(2);
+    opacity: 0.5; }
+  50% {
+    filter: contrast(0.25) brightness(2);
+    opacity: 0.5; }
+  74% {
+    filter: contrast(0.5) brightness(1.5);
+    opacity: 0.75; }
+  75% {
+    filter: contrast(0.5) brightness(1.5);
+    opacity: 0.75; }
+  94% {
+    filter: contrast(1) brightness(1);
+    opacity: 1; }
+  95% {
+    filter: contrast(1) brightness(1);
+    opacity: 1; } }
 
 /**
   * Meet
   */
-.couple {
+.scene-meet .couple {
   width: 100%; }
 
-.spark {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  animation: animateSpark 4s;
-  opacity: 1;
-  top: 0;
-  left: 0; }
+.scene-meet .spark {
+  opacity: 0;
+  left: 85.1%;
+  top: 116%; }
+
+.scene-meet .spark.animate {
+  animation: animateSpark 4s; }
+
+.scene-meet .monitor {
+  opacity: 0;
+  left: 50%;
+  top: 50.1%; }
+
+.scene-meet .monitor.animate {
+  animation: animateMonitors 4s forwards; }
 
 @keyframes animateSpark {
   0% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  25.1% {
     opacity: 1;
-    left: 72%;
-    top: 103%; }
-  20% {
-    left: 72%;
-    top: 110.8%; }
+    left: 85.1%;
+    top: 116%; }
+  26% {
+    left: 85.1%;
+    top: 123.3%; }
+  60% {
+    left: 112%;
+    top: 123.3%; }
   80% {
-    left: 98.9%;
-    top: 110.8%; }
+    opacity: 1;
+    left: 112%;
+    top: 116%; }
+  99% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    left: 112%;
+    top: 116%; } }
+
+@keyframes animateMonitors {
+  0% {
+    opacity: 0; }
+  5% {
+    opacity: 1; }
+  10% {
+    opacity: 0; }
+  15% {
+    opacity: 1; }
+  24% {
+    opacity: 1; }
+  25% {
+    opacity: 0;
+    left: 50%; }
+  79% {
+    opacity: 0;
+    left: 89%; }
+  80% {
+    opacity: 1;
+    left: 89%; }
+  85% {
+    opacity: 0; }
+  90% {
+    opacity: 1; }
+  95% {
+    opacity: 0; }
   100% {
     opacity: 1;
-    left: 98.9%;
-    top: 103%; } }
+    left: 89%; } }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.example-enter {
+  opacity: 0.01; }
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in; }
+
+.example-leave {
+  opacity: 1; }
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 100ms ease-in; }
+
+img {
+  max-width: 100%; }
+
+.pokeFadeOut {
+  animation: pokeFadeOut 1s;
+  opacity: 0; }
+
+.pokeFadeIn {
+  animation: pokeFadeIn 1s;
+  opacity: 1; }
+
+.Typist {
+  text-align: left; }
+
+/**
+    * All scenes
+    */
+.nes-container.text-caption {
+  margin-top: 2em; }
+
+.scene-base {
+  width: 100%; }
+
+.scene-animatable {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translate(-50%, -50%); }
+
+/**
+  * House
+  */
+.scene-house .chimney {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  top: 26.5%;
+  left: 63%; }

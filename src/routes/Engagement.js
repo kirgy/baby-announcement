@@ -5,23 +5,36 @@ import {
     BrowserRouter as Router,
     Link
 } from "react-router-dom";
+import Couple from "../images/Engagement/couple-engagement.png";
 
 export default function Engagement() {
   return (
-    <div>
-        <i className="nes-charmander"></i>
-        <i className="nes-squirtle"></i>
+    <div style={{
+        padding: "2em"
+    }}>
+        <div style={{
+            position: "relative"
+        }}>
+            <img src={Couple} className="couple" />
+        </div>
 
-        <NesContainer title="2012">
+        <NesContainer title="2014" className="text-caption">
             <p>
-                We decided that we were the humans we wanted to spend the rest of our lives with
+                We met with friends and family, and said "I do"
             </p>
         </NesContainer>
-        <Link to="/wedding">
-            <Button primary="true">
-                Next
-            </Button>
-        </Link>
+        <div style={{
+            "text-align": "right",
+            "padding-top": "1em"
+        }}>
+            <Link to="/wedding">
+                <Button primary="true" style={{
+                    "margin-right":  "right"
+                }}>
+                    Next
+                </Button>
+            </Link>
+        </div>                
     </div>
   )
 }

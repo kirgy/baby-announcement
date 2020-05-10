@@ -8,7 +8,7 @@ import {
 import useWindowSize from '../lib/useWindowSize';
 import useResize from '../lib/effects/useResize';
 import Confetti from 'react-confetti';
-import Couple from "../images/couple-wedding.png";
+import Couple from "../images/Wedding/couple-wedding.png";
 import Confetto1 from "../images/confetto-1.png";
 import Confetto2 from "../images/confetto-2.png";
 import Confetto3 from "../images/confetto-3.png";
@@ -55,7 +55,7 @@ export default function Wedding() {
         <div style={{
             padding: "2em"
         }}>
-            <img src={Couple} />
+            <img src={Couple} className="couple" />
         </div>
 
         <NesContainer title="2014" className="text-caption">

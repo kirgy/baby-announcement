@@ -167,7 +167,7 @@ function stageIntro(state) {
 function stageLoading(state) {
     if (!state.visible) {
         return;
-    }    
+    }
     
     return (
         <div>
