@@ -8,17 +8,15 @@
   opacity: 0;
   left: 85.1%;
   top: 116%; }
-
-.scene-meet .spark.animate {
-  animation: animateSpark 4s; }
+  .scene-meet .spark.animate {
+    animation: animateSpark 4s; }
 
 .scene-meet .monitor {
   opacity: 0;
   left: 50%;
   top: 50.1%; }
-
-.scene-meet .monitor.animate {
-  animation: animateMonitors 4s forwards; }
+  .scene-meet .monitor.animate {
+    animation: animateMonitors 4s forwards; }
 
 @keyframes animateSpark {
   0% {

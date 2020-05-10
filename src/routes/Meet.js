@@ -7,8 +7,6 @@ import {
 } from "react-router-dom";
 import { CSSTransitionGroup } from 'react-transition-group'
 import DelayLink from 'react-delay-link';
-import Chris from "../components/Chris";
-import Lucy from "../components/Lucy";
 import Couple from "../images/Meet/couple-meet.png";
 import Spark from "../images/Meet/spark.png";
 import Monitor from "../images/Meet/monitor-heart.png";
@@ -18,7 +16,6 @@ export default class Meet extends Component {
         super(props);
         this.state = {
             showChars: false,
-            fadeOut: false,
             stageReady: false
         };
     }
@@ -37,9 +34,9 @@ export default class Meet extends Component {
         }, 2000);
     }    
     
-    navAction() {
-        this.setState({
-            fadeOut: true
+    navAction(context) {
+        context.setState({
+            showChars: false
         });
     }
     
@@ -48,16 +45,16 @@ export default class Meet extends Component {
         return (
             <div style={{
                 padding: "2em"
-            }} className="scene-meet">
+            }} className={"scene-meet "+(this.state.showChars ? "pokeFadeIn" : "pokeFadeOut")}>
                 <div style={{
                     position: "relative",
-                }} className={this.state.showChars ? "pokeFadeIn" : ""}>
+                }} className="">
                     <img src={Couple} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
                     <img src={Spark} className={"scene-animatable spark "+(this.state.stageReady ? "animate" : "")} />
                     <img src={Monitor} className={"scene-animatable monitor "+(this.state.stageReady ? "animate" : "")} />
                 </div>
 
-                <NesContainer title="2014" className="text-caption">
+                <NesContainer title="2014" className={"text-caption"}>
                     <p>
                         We met with friends and family, and said "I do"
                     </p>
@@ -66,13 +63,13 @@ export default class Meet extends Component {
                     "text-align": "right",
                     "padding-top": "1em"
                 }}>
-                    <Link to="/engagement">
+                    <DelayLink delay={2000} to="/engagement" replace={false}>
                         <Button primary="true" style={{
                             "margin-right":  "right"
-                        }}>
+                        }} onClick={() => this.navAction(this)}>
                             Next
                         </Button>
-                    </Link>
+                    </DelayLink>
                 </div>                
             </div>
         );
