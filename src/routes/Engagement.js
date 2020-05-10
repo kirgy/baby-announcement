@@ -5,36 +5,71 @@ import {
     BrowserRouter as Router,
     Link
 } from "react-router-dom";
+import DelayLink from 'react-delay-link';
 import Couple from "../images/Engagement/couple-engagement.png";
+import ExclamationBubble from "../images/Engagement/exclamation-bubble.png";
 
-export default function Engagement() {
-  return (
-    <div style={{
-        padding: "2em"
-    }}>
-        <div style={{
-            position: "relative"
-        }}>
-            <img src={Couple} className="couple" />
-        </div>
+export default class Engagement extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showChars: false,
+            stageReady: false
+        };
+    }
 
-        <NesContainer title="2014" className="text-caption">
-            <p>
-                We met with friends and family, and said "I do"
-            </p>
-        </NesContainer>
-        <div style={{
-            "text-align": "right",
-            "padding-top": "1em"
-        }}>
-            <Link to="/wedding">
-                <Button primary="true" style={{
-                    "margin-right":  "right"
-                }}>
-                    Next
-                </Button>
-            </Link>
-        </div>                
-    </div>
-  )
+    componentDidMount() {
+        this.setState({showChars:true});
+        this.setStageReady();
+    }
+
+    setStageReady() {
+        let context = this;
+        setTimeout(() => {
+            context.setState({
+                stageReady: true
+            });
+        }, 2000);
+    }    
+    
+    navAction(context) {
+        context.setState({
+            showChars: false
+        });
+    }
+        
+    render() {
+        return (
+            <div style={{
+                padding: "2em"
+            }} className={"scene-engagement "+(this.state.showChars ? "pokeFadeIn" : "pokeFadeOut")}>
+                <div style={{
+                    position: "relative",
+                }} className="">
+                    <img src={Couple} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
+                    <img src={ExclamationBubble} className={"scene-animatable exclamation-bubble "+(this.state.stageReady ? "animate" : "")} />
+                </div>
+
+                <NesContainer title="2008" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
+                    <p>
+                        We met online and talked for 6 months before we got the courage to meet up in person. #swippingRightBeforeTinder
+                    </p>
+                </NesContainer>
+                <div style={{
+                    "text-align": "right",
+                    "padding-top": "1em"
+                }}
+                    className={"cta "+(this.state.stageReady ? "animate" : "")}
+                >
+                    <DelayLink delay={2000} to="/wedding" replace={false}>
+                        <Button primary="true" style={{
+                            "margin-right":  "right"
+                        }} onClick={() => this.navAction(this)}>
+                            Next
+                        </Button>
+                    </DelayLink>
+                </div>                
+            </div>
+        );
+      }
 }

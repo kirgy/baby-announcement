@@ -40,7 +40,6 @@ export default class Meet extends Component {
         });
     }
     
-
     render() {
         return (
             <div style={{
@@ -54,9 +53,9 @@ export default class Meet extends Component {
                     <img src={Monitor} className={"scene-animatable monitor "+(this.state.stageReady ? "animate" : "")} />
                 </div>
 
-                <NesContainer title="2014" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
+                <NesContainer title="2008" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
-                        We met with friends and family, and said "I do"
+                        We met online and talked for 6 months before we got the courage to meet up in person. #swippingRightBeforeTinder
                     </p>
                 </NesContainer>
                 <div style={{
@@ -76,4 +75,4 @@ export default class Meet extends Component {
             </div>
         );
       }
-    }
+}

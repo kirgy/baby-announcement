@@ -146,6 +146,46 @@
     opacity: 1;
     left: 89%; } }
 
+/**
+  * Engagement
+  */
+.scene-engagement .couple {
+  width: 100%; }
+
+.scene-engagement .exclamation-bubble {
+  opacity: 0;
+  left: 85.1%;
+  top: 116%; }
+
+.scene-engagement .exclamation-bubble.animate {
+  animation: animateExclamation 2s forwards; }
+
+.scene-engagement .caption {
+  opacity: 0; }
+
+.scene-engagement .caption.animate {
+  animation: animateCaption 2.4s forwards; }
+
+.scene-engagement .cta {
+  opacity: 0; }
+
+.scene-engagement .cta.animate {
+  animation: animateCTA 5s forwards; }
+
+@keyframes animateExclamation {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 1; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 1; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
 @keyframes animateCaption {
   0% {
     opacity: 0; }
@@ -210,6 +250,25 @@ img {
   left: 0;
   position: absolute;
   transform: translate(-50%, -50%); }
+
+/**
+    * Stage
+    */
+@keyframes animateCaption {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes animateCTA {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /**
   * House

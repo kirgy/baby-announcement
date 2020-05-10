@@ -1,5 +1,6 @@
 @import "./Animations.scss";
 @import "./scenes/Meet.scss";
+@import "./scenes/Engagement.scss";
 
 body {
     margin: 0;
@@ -65,6 +66,37 @@ body {
         transform: translate(-50%, -50%);      
     }
 
+    /**
+    * Stage
+    */
+    @keyframes animateCaption { 
+        0% {
+          opacity: 0;
+          
+        }
+        80% {
+          opacity: 0;
+          
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    
+      @keyframes animateCTA {
+        
+        0% {
+          opacity: 0;
+          
+        }
+        80% {
+          opacity: 0;
+          
+        }
+        100% {
+          opacity: 1;
+        }
+      }      
 
   /**
   * House
