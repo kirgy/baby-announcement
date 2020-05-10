@@ -45,7 +45,7 @@ class App extends Component {
               position: "fixed",
               top: 0,
               right: 0,
-              "text-align": "right"
+              textAlign: "right"
             }}>
             <button onClick={() => {this.setState({devMenuOpen: !this.state.devMenuOpen})}}>
               {this.state.devMenuOpen ? '=' : 'X'}

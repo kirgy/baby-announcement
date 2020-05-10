@@ -50,9 +50,9 @@ export default class Engagement extends Component {
                     <img src={ExclamationBubble} className={"scene-animatable exclamation-bubble "+(this.state.stageReady ? "animate" : "")} />
                 </div>
 
-                <NesContainer title="2008" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
+                <NesContainer title="2012" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
-                        We met online and talked for 6 months before we got the courage to meet up in person. #swippingRightBeforeTinder
+                        After 4 years we decided we we're the humans we wanted to spend our lives with.
                     </p>
                 </NesContainer>
                 <div style={{
