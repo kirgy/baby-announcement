@@ -54,7 +54,7 @@ export default class Meet extends Component {
                     <img src={Monitor} className={"scene-animatable monitor "+(this.state.stageReady ? "animate" : "")} />
                 </div>
 
-                <NesContainer title="2014" className={"text-caption"}>
+                <NesContainer title="2014" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
                         We met with friends and family, and said "I do"
                     </p>
@@ -62,7 +62,9 @@ export default class Meet extends Component {
                 <div style={{
                     "text-align": "right",
                     "padding-top": "1em"
-                }}>
+                }}
+                    className={"cta "+(this.state.stageReady ? "animate" : "")}
+                >
                     <DelayLink delay={2000} to="/engagement" replace={false}>
                         <Button primary="true" style={{
                             "margin-right":  "right"

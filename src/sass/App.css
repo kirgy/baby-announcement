@@ -66,15 +66,29 @@
   opacity: 0;
   left: 85.1%;
   top: 116%; }
-  .scene-meet .spark.animate {
-    animation: animateSpark 4s; }
+
+.scene-meet .spark.animate {
+  animation: animateSpark 4s; }
 
 .scene-meet .monitor {
   opacity: 0;
   left: 50%;
   top: 50.1%; }
-  .scene-meet .monitor.animate {
-    animation: animateMonitors 4s forwards; }
+
+.scene-meet .monitor.animate {
+  animation: animateMonitors 4s forwards; }
+
+.scene-meet .caption {
+  opacity: 0; }
+
+.scene-meet .caption.animate {
+  animation: animateCaption 5.6s forwards; }
+
+.scene-meet .cta {
+  opacity: 0; }
+
+.scene-meet .cta.animate {
+  animation: animateCTA 7.2s forwards; }
 
 @keyframes animateSpark {
   0% {
@@ -131,6 +145,22 @@
   100% {
     opacity: 1;
     left: 89%; } }
+
+@keyframes animateCaption {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes animateCTA {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 body {
   margin: 0;

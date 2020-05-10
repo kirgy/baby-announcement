@@ -3,6 +3,8 @@
   */
 .scene-meet {
   $animation-duration: 4s;
+  $animation-capation-start-80-percent: $animation-duration*1.4;
+  $animation-cta-start-80-percent: $animation-duration*1.8;
 
   .couple {
     width: 100%;
@@ -26,6 +28,20 @@
     &.animate {
       animation: animateMonitors $animation-duration forwards;
     }    
+  }
+
+  .caption {
+    opacity: 0;
+    &.animate {
+      animation: animateCaption $animation-capation-start-80-percent forwards;
+    }
+  }
+  
+  .cta {
+    opacity: 0;
+    &.animate {
+      animation: animateCTA $animation-cta-start-80-percent forwards;
+    }
   }
   
   @keyframes animateSpark {
@@ -108,6 +124,35 @@
     100% {
       opacity: 1;
       left: 89%;
+    }
+  }  
+
+  @keyframes animateCaption { 
+    0% {
+      opacity: 0;
+      
+    }
+    80% {
+      opacity: 0;
+      
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes animateCTA {
+    
+    0% {
+      opacity: 0;
+      
+    }
+    80% {
+      opacity: 0;
+      
+    }
+    100% {
+      opacity: 1;
     }
   }  
 }  
