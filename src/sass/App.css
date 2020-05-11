@@ -105,7 +105,7 @@
 
 .scene-meet .cta.animate {
   animation: animateCTA 1s forwards;
-  animation-delay: 7s; }
+  animation-delay: 8s; }
 
 @keyframes animateSpark {
   0% {
@@ -190,7 +190,7 @@
 
 .scene-engagement .cta.animate {
   animation: animateCTA 1s forwards;
-  animation-delay: 4s; }
+  animation-delay: 5s; }
 
 @keyframes animateExclamation {
   0% {

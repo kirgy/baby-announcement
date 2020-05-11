@@ -8,27 +8,31 @@
   opacity: 0;
   left: 85.1%;
   top: 116%; }
-  .scene-meet .spark.animate {
-    animation: animateSpark 4s; }
+
+.scene-meet .spark.animate {
+  animation: animateSpark 4s; }
 
 .scene-meet .monitor {
   opacity: 0;
   left: 77%;
   top: 118.6%; }
-  .scene-meet .monitor.animate {
-    animation: animateMonitors 4s forwards; }
+
+.scene-meet .monitor.animate {
+  animation: animateMonitors 4s forwards; }
 
 .scene-meet .caption {
   opacity: 0; }
-  .scene-meet .caption.animate {
-    animation: animateCaption 2s forwards;
-    animation-delay: 4s; }
+
+.scene-meet .caption.animate {
+  animation: animateCaption 2s forwards;
+  animation-delay: 4s; }
 
 .scene-meet .cta {
   opacity: 0; }
-  .scene-meet .cta.animate {
-    animation: animateCTA 1s forwards;
-    animation-delay: 7s; }
+
+.scene-meet .cta.animate {
+  animation: animateCTA 1s forwards;
+  animation-delay: 8s; }
 
 @keyframes animateSpark {
   0% {

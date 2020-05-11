@@ -8,20 +8,23 @@
   opacity: 0;
   left: 70%;
   top: 60%; }
-  .scene-engagement .exclamation-bubble.animate {
-    animation: animateExclamation 2s forwards; }
+
+.scene-engagement .exclamation-bubble.animate {
+  animation: animateExclamation 2s forwards; }
 
 .scene-engagement .caption {
   opacity: 0; }
-  .scene-engagement .caption.animate {
-    animation: animateCaption 2s forwards;
-    animation-delay: 2s; }
+
+.scene-engagement .caption.animate {
+  animation: animateCaption 2s forwards;
+  animation-delay: 2s; }
 
 .scene-engagement .cta {
   opacity: 0; }
-  .scene-engagement .cta.animate {
-    animation: animateCTA 1s forwards;
-    animation-delay: 4s; }
+
+.scene-engagement .cta.animate {
+  animation: animateCTA 1s forwards;
+  animation-delay: 5s; }
 
 @keyframes animateExclamation {
   0% {
