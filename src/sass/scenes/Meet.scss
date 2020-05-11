@@ -22,8 +22,8 @@
 
   .monitor {
     opacity: 0;
-    left: 50%;
-    top: 50.1%;    
+    left: 77%;
+    top: 118.6%;
 
     &.animate {
       animation: animateMonitors $animation-duration forwards;
@@ -52,25 +52,25 @@
       opacity: 0;
     }
     25.1% {
-      opacity: 1;
+      opacity: 1;      
       left: 85.1%;
-      top: 116%;      
+      top: 110.2%;    
     }
   
-    26% {
+    35% {
       left: 85.1%;
-      top: 123.3%;
+      top: 114.5%;
     }
   
     60% {
       left: 112%;
-      top: 123.3%;
+      top: 114.5%;
     }
   
     80% {
       opacity: 1;
       left: 112%;
-      top: 116%;
+      top: 110.2%;
     }
     99% {
       opacity: 1;      
@@ -78,7 +78,7 @@
     100% {
       opacity: 0;
       left: 112%;
-      top: 116%;      
+      top: 110.2%
     }  
   }
 
@@ -100,17 +100,18 @@
     }     
     25% {
       opacity: 0;
-      left: 50%;
+      left: 77%;
+      top: 118.6%;
     }
   
 
     79% {
       opacity: 0;
-      left: 89%;
+      left: 116%;
     }
     80% {
       opacity: 1;
-      left: 89%;
+      left: 116%;
     }
     85% {
       opacity: 0;
@@ -123,7 +124,7 @@
     }     
     100% {
       opacity: 1;
-      left: 89%;
+      left: 116%;
     }
   }  
 }  

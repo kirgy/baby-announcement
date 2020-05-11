@@ -1,0 +1,82 @@
+  /**
+  * Meet
+  */
+  .scene-house {
+    $animation-duration: 0s;
+    $animation-chimney-start-80-percent: 4s;
+    $animation-capation-start-80-percent: $animation-duration*1.4;
+    $animation-cta-start-80-percent: $animation-duration*1.8;
+    $further-text-duration: 1s;
+    
+    .couple {
+      width: 100%;
+    }
+  
+    .caption {
+      opacity: 0;
+      &.animate {
+        animation: animateCaption $animation-capation-start-80-percent forwards;
+      }
+    }
+    
+    .cta {
+      opacity: 0;
+      &.animate {
+        animation: animateCTA $animation-cta-start-80-percent forwards;
+      }
+    }
+
+    .chimney {
+        left: 0%;
+        top: 0%;        
+        transform-origin: 63.4% 31.4%;
+        transform: rotate(0deg); 
+
+        &.animate {
+            animation: animateChimney $animation-chimney-start-80-percent forwards;
+            animation-delay: $animation-duration;
+            animation-timing-function: ease-in;
+        }
+    }
+
+    .further-text {
+        opacity: 0;
+        &.animate {
+            animation: pokeFadeIn $further-text-duration forwards;
+            animation-delay: $animation-duration + $animation-chimney-start-80-percent;
+        }
+    }
+
+    .house-overlay {
+        left: 50%;
+        top: 50%;        
+    }
+  
+
+  @keyframes animateChimney {
+    0% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(5deg);
+        left: 0%;
+        top: 0%;        
+    }
+    85% {
+        top: 0%;        
+        left: 15%;
+
+    }        
+    90% {
+        transform: rotate(180deg);
+        left: 15%;
+        top:41%;
+    }    
+    100% {
+        transform: rotate(180deg);
+        left: 15%;
+        top:41%;        
+    }
+  }  
+
+}  

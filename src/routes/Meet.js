@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { CSSTransitionGroup } from 'react-transition-group'
 import DelayLink from 'react-delay-link';
-import Couple from "../images/Meet/couple-meet.png";
+import Couple from "../images/Meet/couple-meet.gif";
 import Spark from "../images/Meet/spark.png";
 import Monitor from "../images/Meet/monitor-heart.png";
 
@@ -55,7 +55,7 @@ export default class Meet extends Component {
 
                 <NesContainer title="2008" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
-                        We met online and talked for 6 months before we got the courage to meet up in person. #swippingRightBeforeTinder
+                        It all started when we met online. It took 6 months before we got the courage to meet up in person. #swippingRight
                     </p>
                 </NesContainer>
                 <div style={{

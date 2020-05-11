@@ -54,4 +54,7 @@
     opacity: 1; }
   95% {
     filter: contrast(1) brightness(1);
+    opacity: 1; }
+  100% {
+    filter: contrast(1) brightness(1);
     opacity: 1; } }

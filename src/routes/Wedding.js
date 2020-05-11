@@ -8,7 +8,7 @@ import {
 import useWindowSize from '../lib/useWindowSize';
 import useResize from '../lib/effects/useResize';
 import Confetti from 'react-confetti';
-import Couple from "../images/Wedding/couple-wedding.png";
+import Couple from "../images/Wedding/couple-wedding-confetti.gif";
 import Confetto1 from "../images/confetto-1.png";
 import Confetto2 from "../images/confetto-2.png";
 import Confetto3 from "../images/confetto-3.png";
@@ -57,7 +57,7 @@ export default class Wedding extends Component {
 
         return (
             <div>
-                <div style={{
+                {/* <div style={{
                     position: "fixed",
                     left: 0,
                     top: 0,
@@ -77,7 +77,7 @@ export default class Wedding extends Component {
                             }
                         }}            
                     />
-                </div>
+                </div> */}
         
                 <div style={{
                     padding: "2em"

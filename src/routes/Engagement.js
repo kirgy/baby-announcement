@@ -6,7 +6,7 @@ import {
     Link
 } from "react-router-dom";
 import DelayLink from 'react-delay-link';
-import Couple from "../images/Engagement/couple-engagement.png";
+import Couple from "../images/Engagement/couple-engagement.gif";
 import ExclamationBubble from "../images/Engagement/exclamation-bubble.png";
 
 export default class Engagement extends Component {

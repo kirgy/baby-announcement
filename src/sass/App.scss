@@ -1,6 +1,7 @@
 @import "./Animations.scss";
 @import "./scenes/Meet.scss";
 @import "./scenes/Engagement.scss";
+@import "./scenes/House.scss";
 
 body {
     margin: 0;
@@ -102,13 +103,13 @@ body {
   * House
   */
 
-  .scene-house {
-      .chimney {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        // animation: animateSpark 4s;
-        opacity: 1;
-        top: 26.5%;
-        left: 63%;
-      }
-  }
+//   .scene-house {
+//       .chimney {
+//         position: absolute;
+//         transform: translate(-50%, -50%);
+//         // animation: animateSpark 4s;
+//         opacity: 1;
+//         top: 26.5%;
+//         left: 63%;
+//       }
+//   }

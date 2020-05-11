@@ -12,8 +12,8 @@
       
     .exclamation-bubble {
       opacity: 0;
-      left: 85.1%;
-      top: 116%;
+      left: 70%;
+      top: 60%;
   
       &.animate {
         animation: animateExclamation $animation-duration forwards;
@@ -38,15 +38,30 @@
         0% {
             opacity: 0;
         }
+        19% {
+            opacity: 0;
+        }        
         20% {
             opacity: 1;
         }
+
+        39% {
+            opacity: 1;
+        }            
         40% {
             opacity: 0;
-        }    
+        } 
+        
+        59% {
+            opacity: 0;
+        }                  
         60% {
             opacity: 1;
-        }          
+        } 
+
+        79% {
+            opacity: 0;
+        }        
         80% {
             opacity: 1;
         }
