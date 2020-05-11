@@ -14,12 +14,14 @@
 .scene-engagement .caption {
   opacity: 0; }
   .scene-engagement .caption.animate {
-    animation: animateCaption 2.4s forwards; }
+    animation: animateCaption 2s forwards;
+    animation-delay: 2s; }
 
 .scene-engagement .cta {
   opacity: 0; }
   .scene-engagement .cta.animate {
-    animation: animateCTA 5s forwards; }
+    animation: animateCTA 1s forwards;
+    animation-delay: 4s; }
 
 @keyframes animateExclamation {
   0% {
@@ -40,21 +42,5 @@
     opacity: 0; }
   80% {
     opacity: 1; }
-  100% {
-    opacity: 1; } }
-
-@keyframes animateCaption {
-  0% {
-    opacity: 0; }
-  80% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes animateCTA {
-  0% {
-    opacity: 0; }
-  80% {
-    opacity: 0; }
   100% {
     opacity: 1; } }

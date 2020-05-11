@@ -2,58 +2,42 @@
   * Wedding
   */
   .scene-wedding {
-    $animation-duration: 2s;
-    $animation-capation-start-80-percent: $animation-duration * 1.2;
-    $animation-cta-start-80-percent: $animation-duration * 2.5;
-    $animation-cta-delay: 1s;
+    $animation-duration: 1s;
+    $animation-capation-duration: 2s;
+    $animation-caption-start: 3s;
+    $animation-cta-duration: 1s;
+    $animation-cta-delay: 5s;
+    $animation-confetti-duration: 2s;
+    $animation-confetti-delay: 0.5s;
   
     .couple {
       width: 100%;
     }
 
+    .confetti {
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        &.animate {
+            animation: pokeFadeIn $animation-confetti-duration forwards;
+            animation-delay: $animation-confetti-delay;
+        }
+    }
+
     .caption {
       opacity: 0;
       &.animate {
-        animation: animateCaption $animation-capation-start-80-percent forwards;
-        animation-delay: $animation-duration;
+        animation: animateCaption $animation-capation-duration forwards;
+        animation-delay: $animation-caption-start;
       }
     }
     
     .cta {
       opacity: 0;
       &.animate {
-        animation: animateCTA $animation-cta-start-80-percent forwards;
-        animation-delay: $animation-duration + $animation-cta-delay;
+        animation: animateCTA $animation-cta-duration forwards;
+        animation-delay: $animation-cta-delay;
       }
     }
-    
-    @keyframes animateCaption { 
-      0% {
-        opacity: 0;
-        
-      }
-      80% {
-        opacity: 0;
-        
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  
-    @keyframes animateCTA {
-      
-      0% {
-        opacity: 0;
-        
-      }
-      80% {
-        opacity: 0;
-        
-      }
-      100% {
-        opacity: 1;
-      }
-    }  
   }  
   

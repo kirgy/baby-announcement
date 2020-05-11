@@ -55,7 +55,7 @@ export default class House extends Component {
 
                 <NesContainer title="2018" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
-                        After a lot of hard work we bought our very own house to make our home. <span className={"further-text "+(this.state.stageReady ? "animate" : "")}>It's a fixer-upper.</span>
+                        After a lot of hard work we bought our very own house to make our home...<span className={"further-text "+(this.state.stageReady ? "animate" : "")}>it's a fixer-upper.</span>
                     </p>
                 </NesContainer>
                 <div style={{

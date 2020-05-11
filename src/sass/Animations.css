@@ -58,3 +58,15 @@
   100% {
     filter: contrast(1) brightness(1);
     opacity: 1; } }
+
+@keyframes animateCaption {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes animateCTA {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

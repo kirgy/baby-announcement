@@ -3,8 +3,10 @@
   */
 .scene-meet {
   $animation-duration: 4s;
-  $animation-capation-start-80-percent: $animation-duration*1.4;
-  $animation-cta-start-80-percent: $animation-duration*1.8;
+  $animation-caption-duration: 2s;
+  $animation-caption-start: 4s;
+  $animation-cta-start: 7s;
+  $animation-cta-duration: 1s;
 
   .couple {
     width: 100%;
@@ -33,14 +35,16 @@
   .caption {
     opacity: 0;
     &.animate {
-      animation: animateCaption $animation-capation-start-80-percent forwards;
+      animation: animateCaption $animation-caption-duration forwards;
+      animation-delay: $animation-caption-start;
     }
   }
   
   .cta {
     opacity: 0;
     &.animate {
-      animation: animateCTA $animation-cta-start-80-percent forwards;
+      animation: animateCTA $animation-cta-duration forwards;
+      animation-delay: $animation-cta-start;
     }
   }
   

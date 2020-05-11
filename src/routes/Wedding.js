@@ -5,14 +5,8 @@ import {
     BrowserRouter as Router,
     Link
 } from "react-router-dom";
-import useWindowSize from '../lib/useWindowSize';
-import useResize from '../lib/effects/useResize';
-import Confetti from 'react-confetti';
-import Couple from "../images/Wedding/couple-wedding-confetti.gif";
-import Confetto1 from "../images/confetto-1.png";
-import Confetto2 from "../images/confetto-2.png";
-import Confetto3 from "../images/confetto-3.png";
-import Confetto4 from "../images/confetto-4.png";
+import Couple from "../images/Wedding/couple-wedding.gif";
+import Confetti from "../images/Wedding/confetti.gif";
 import DelayLink from 'react-delay-link';
 
 export default class Wedding extends Component {
@@ -45,50 +39,18 @@ export default class Wedding extends Component {
     }
 
     render() {
-        const windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-        const windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-        const items = [];
-        const confetti = [Confetto1, Confetto2, Confetto3, Confetto4];
-    
-        for(var i = 0; i<2; i++) {
-            let img = new Image();
-            img.src = confetti[i]
-            items.push(img);
-        }         
-
         return (
             <div style={{
                 padding: "2em"
             }} className={"scene-wedding "+(this.state.showChars ? "pokeFadeIn" : "pokeFadeOut")}>
-                {/* <div style={{
-                    position: "fixed",
-                    left: 0,
-                    top: 0,
-                }}>
-                    <Confetti
-                        width={windowWidth}
-                        height={windowHeight}
-                        gravity={0.05}
-                        wind={-0.02}
-                        numberOfPieces={50}
-                        drawShape={ctx => {
-                            var img = items[Math.floor(Math.random() * items.length)];         
-        
-                            for(let i = 0; i < 22; i++) {                 
-                                ctx.drawImage(img, 0, 0);
-        
-                            }
-                        }}            
-                    />
-                </div> */}
-        
                 <div style={{
-                    padding: "2em"
-                }}>
-                    <img src={Couple} className="couple" />
+                    position: "relative",
+                }} className="">
+                    <img src={Couple} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
+                    <img src={Confetti} className={"scene-animatable confetti "+(this.state.stageReady ? "animate" : "")} />
                 </div>
         
-                <NesContainer title="2014" className={"text-caption "+(this.state.stageReady ? "animate" : "")}>
+                <NesContainer title="2014" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
                         We met with friends and family, and said "I do"
                     </p>
@@ -102,7 +64,7 @@ export default class Wedding extends Component {
                     <DelayLink delay={2000} to="/house" replace={false}>
                         <Button primary="true" style={{
                             "margin-right":  "right"
-                        }}>
+                        }} onClick={() => this.navAction(this)}>
                             Next
                         </Button>
                     </DelayLink>
