@@ -1,0 +1,59 @@
+  /**
+  * Wedding
+  */
+  .scene-wedding {
+    $animation-duration: 2s;
+    $animation-capation-start-80-percent: $animation-duration * 1.2;
+    $animation-cta-start-80-percent: $animation-duration * 2.5;
+    $animation-cta-delay: 1s;
+  
+    .couple {
+      width: 100%;
+    }
+
+    .caption {
+      opacity: 0;
+      &.animate {
+        animation: animateCaption $animation-capation-start-80-percent forwards;
+        animation-delay: $animation-duration;
+      }
+    }
+    
+    .cta {
+      opacity: 0;
+      &.animate {
+        animation: animateCTA $animation-cta-start-80-percent forwards;
+        animation-delay: $animation-duration + $animation-cta-delay;
+      }
+    }
+    
+    @keyframes animateCaption { 
+      0% {
+        opacity: 0;
+        
+      }
+      80% {
+        opacity: 0;
+        
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  
+    @keyframes animateCTA {
+      
+      0% {
+        opacity: 0;
+        
+      }
+      80% {
+        opacity: 0;
+        
+      }
+      100% {
+        opacity: 1;
+      }
+    }  
+  }  
+  

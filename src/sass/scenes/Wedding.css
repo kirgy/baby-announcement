@@ -1,0 +1,35 @@
+/**
+  * Wedding
+  */
+.scene-wedding .couple {
+  width: 100%; }
+
+.scene-wedding .caption {
+  opacity: 0; }
+
+.scene-wedding .caption.animate {
+  animation: animateCaption 2.4s forwards;
+  animation-delay: 2s; }
+
+.scene-wedding .cta {
+  opacity: 0; }
+
+.scene-wedding .cta.animate {
+  animation: animateCTA 5s forwards;
+  animation-delay: 3s; }
+
+@keyframes animateCaption {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes animateCTA {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

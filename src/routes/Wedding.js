@@ -13,6 +13,7 @@ import Confetto1 from "../images/confetto-1.png";
 import Confetto2 from "../images/confetto-2.png";
 import Confetto3 from "../images/confetto-3.png";
 import Confetto4 from "../images/confetto-4.png";
+import DelayLink from 'react-delay-link';
 
 export default class Wedding extends Component {
     constructor(props) {
@@ -56,7 +57,9 @@ export default class Wedding extends Component {
         }         
 
         return (
-            <div>
+            <div style={{
+                padding: "2em"
+            }} className={"scene-wedding "+(this.state.showChars ? "pokeFadeIn" : "pokeFadeOut")}>
                 {/* <div style={{
                     position: "fixed",
                     left: 0,
@@ -85,22 +88,24 @@ export default class Wedding extends Component {
                     <img src={Couple} className="couple" />
                 </div>
         
-                <NesContainer title="2014" className="text-caption">
+                <NesContainer title="2014" className={"text-caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
                         We met with friends and family, and said "I do"
                     </p>
                 </NesContainer>
                 <div style={{
-                    textAlign: "right",
-                    paddingTop: "1em"
-                }}>
-                    <Link to="/house">
+                    "text-align": "right",
+                    "padding-top": "1em"
+                }}
+                    className={"cta "+(this.state.stageReady ? "animate" : "")}
+                >
+                    <DelayLink delay={2000} to="/house" replace={false}>
                         <Button primary="true" style={{
                             "margin-right":  "right"
                         }}>
                             Next
                         </Button>
-                    </Link>
+                    </DelayLink>
                 </div>
             </div>
         )

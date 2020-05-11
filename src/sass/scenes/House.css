@@ -6,33 +6,29 @@
 
 .scene-house .caption {
   opacity: 0; }
-
-.scene-house .caption.animate {
-  animation: animateCaption 0s forwards; }
+  .scene-house .caption.animate {
+    animation: animateCaption 0s forwards; }
 
 .scene-house .cta {
   opacity: 0; }
-
-.scene-house .cta.animate {
-  animation: animateCTA 0s forwards; }
+  .scene-house .cta.animate {
+    animation: animateCTA 0s forwards; }
 
 .scene-house .chimney {
   left: 0%;
   top: 0%;
   transform-origin: 63.4% 31.4%;
   transform: rotate(0deg); }
-
-.scene-house .chimney.animate {
-  animation: animateChimney 4s forwards;
-  animation-delay: 0s;
-  animation-timing-function: ease-in; }
+  .scene-house .chimney.animate {
+    animation: animateChimney 4s forwards;
+    animation-delay: 0s;
+    animation-timing-function: ease-in; }
 
 .scene-house .further-text {
   opacity: 0; }
-
-.scene-house .further-text.animate {
-  animation: pokeFadeIn 1s forwards;
-  animation-delay: 4s; }
+  .scene-house .further-text.animate {
+    animation: pokeFadeIn 1s forwards;
+    animation-delay: 4s; }
 
 .scene-house .house-overlay {
   left: 50%;
