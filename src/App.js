@@ -14,6 +14,7 @@ import Wedding from "./routes/Wedding";
 import House from "./routes/House";
 import Virus from "./routes/Virus";
 import Baby from "./routes/Baby";
+import Now from "./routes/Now";
 // import ErrorNotFound from "./routes/404";
 import Background from "./images/background.png";
 
@@ -151,7 +152,7 @@ class App extends Component {
                   <div className="app-wrapper light-animate">
                     <div className="route-outer-wrapper">
                       <div className="route-inner-wrapper">                  
-                        <Baby />
+                        <Now />
                       </div>
                     </div>
                   </div>

@@ -82,7 +82,8 @@
   95% {
     opacity: 0; }
   100% {
-    opacity: 0; } }
+    opacity: 1;
+    background-color: #fff; } }
 
 @keyframes pokeFadeInLight {
   0% {

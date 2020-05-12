@@ -1,0 +1,170 @@
+  /**
+  * Now
+  */
+  .scene-now {
+    $animation-duration: 2s;
+    $animation-caption-duration: 2s;
+    $animation-caption-start: 2s;
+    $animation-cta-start: 5s;
+    $animation-cta-duration: 1s;
+
+    // loading text
+    $animation-loading-text-duration: 1s;
+    $animation-loading-text-start: 0s;
+
+    // progress bar
+    $animation-progress-duration: 1s;
+    $animation-progress-start: 0s;
+
+    // progress bar meter
+    $animation-progress-meter-duration: 12s;
+    $animation-progress-meter-start: 3s;
+
+    // progress bar meter final
+    $animation-progress-meter-final-duration: 1s;
+    $animation-progress-meter-final-start: 15s;
+
+    .couple {
+      width: 100%;
+      opacity: 0;
+    //   &.animate {
+    //     animation: animateCaption $animation-caption-duration forwards;
+    //     animation-delay: $animation-caption-start;
+    //   }      
+    }
+
+    .progress-bar-container {
+        padding-right: 7px;
+        width: 100%;
+        top: 50%;
+        position: absolute;
+        margin-top: -24px;
+    }
+
+    .loading-title {
+        opacity: 0;
+
+        &.animate {
+            animation: pokeFadeIn $animation-loading-text-duration forwards;
+            animation-delay: $animation-loading-text-start;
+        }
+    }
+
+    .progress-bar {
+        opacity: 0;
+        border-image-slice: 2;
+        border-image-width: 2;
+        border-image-repeat: stretch;
+        border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+        border-image-outset: 2;
+        width: 100%;
+        height: 48px;
+        margin: 4px;
+        color: #212529;
+        background-color: #fff;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        
+        border-image-repeat: space;
+        margin-bottom: 1.5rem !important;
+
+        border-style: solid;
+        border-width: 4px;
+
+
+        .progress-meter, .progress-meter-final {
+            background-color: #000;
+            height: 100%;
+            width: 0%;
+        }
+
+        &.animate {
+            animation: pokeFadeIn $animation-progress-duration forwards;
+            animation-delay: $animation-progress-start;
+
+            .progress-meter {
+                animation: animateProgressMeter $animation-progress-meter-duration forwards;
+                animation-delay: $animation-progress-meter-start;
+            }
+
+            .progress-meter-final {
+                transition: width 1s ease;
+                // opacity: 0;
+
+                animation: animateProgressMeterFinal $animation-progress-meter-final-duration forwards;
+                animation-delay: $animation-progress-meter-final-start;                
+            }
+        }
+    }
+  
+    .caption {
+      opacity: 0;
+      &.animate {
+        animation: animateCaption $animation-caption-duration forwards;
+        animation-delay: $animation-caption-start;
+      }
+    }
+    
+    .cta {
+      opacity: 0;
+      &.animate {
+        animation: animateCTA $animation-cta-duration forwards;
+        animation-delay: $animation-cta-start;
+      }
+    }
+
+
+    @keyframes animateProgress {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }        
+    }
+
+    @keyframes animateProgressMeter {
+        0% {
+            width: 0%;
+        }
+        10% {
+            width: 30%;
+        }
+        15% {
+            width: 30%;
+        }        
+        30% {
+            width: 50%
+        }
+        40% {
+            width: 50%
+        }        
+        60% {
+            width: 80%
+        }
+        80% {
+            width: 0%;
+            // display: none;
+        }                
+        100% {
+            width: 0%;
+            // height: 0%;
+            display: none;
+        }                        
+        // 100% {
+        //     opacity: 1;
+        //     width: 100%;
+        // }
+    }
+
+    @keyframes animateProgressMeterFinal {
+        // 100% {
+        //     // display: block;
+        // }                     
+        // 100% {
+        //     // display: block;
+        // }                        
+    }    
+  }  
+  

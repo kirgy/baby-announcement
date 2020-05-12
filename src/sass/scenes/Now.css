@@ -1,0 +1,99 @@
+/**
+  * Now
+  */
+.scene-now .couple {
+  width: 100%;
+  opacity: 0; }
+
+.scene-now .progress-bar-container {
+  padding-right: 7px;
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  margin-top: -24px; }
+
+.scene-now .loading-title {
+  opacity: 0; }
+
+.scene-now .loading-title.animate {
+  animation: pokeFadeIn 1s forwards;
+  animation-delay: 0s; }
+
+.scene-now .progress-bar {
+  opacity: 0;
+  border-image-slice: 2;
+  border-image-width: 2;
+  border-image-repeat: stretch;
+  border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+  border-image-outset: 2;
+  width: 100%;
+  height: 48px;
+  margin: 4px;
+  color: #212529;
+  background-color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-image-repeat: space;
+  margin-bottom: 1.5rem !important;
+  border-style: solid;
+  border-width: 4px; }
+
+.scene-now .progress-bar .progress-meter, .scene-now .progress-bar .progress-meter-final {
+  background-color: #000;
+  height: 100%;
+  width: 0%; }
+
+.scene-now .progress-bar.animate {
+  animation: pokeFadeIn 1s forwards;
+  animation-delay: 0s; }
+
+.scene-now .progress-bar.animate .progress-meter {
+  animation: animateProgressMeter 12s forwards;
+  animation-delay: 3s; }
+
+.scene-now .progress-bar.animate .progress-meter-final {
+  transition: width 1s ease;
+  animation: animateProgressMeterFinal 1s forwards;
+  animation-delay: 15s; }
+
+.scene-now .caption {
+  opacity: 0; }
+
+.scene-now .caption.animate {
+  animation: animateCaption 2s forwards;
+  animation-delay: 2s; }
+
+.scene-now .cta {
+  opacity: 0; }
+
+.scene-now .cta.animate {
+  animation: animateCTA 1s forwards;
+  animation-delay: 5s; }
+
+@keyframes animateProgress {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes animateProgressMeter {
+  0% {
+    width: 0%; }
+  10% {
+    width: 30%; }
+  15% {
+    width: 30%; }
+  30% {
+    width: 50%; }
+  40% {
+    width: 50%; }
+  60% {
+    width: 80%; }
+  80% {
+    width: 0%; }
+  100% {
+    width: 0%;
+    display: none; } }
+
+@keyframes animateProgressMeterFinal {}
