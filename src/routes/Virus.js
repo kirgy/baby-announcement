@@ -41,13 +41,13 @@ export default class Virus extends Component {
         return (
             <div style={{
                 padding: "2em"
-            }} className={"scene-virus "+(this.state.showChars ? "pokeFadeIn" : "pokeFadeOut")}>
+            }} className={"scene-virus "+(this.state.showChars ? "pokeFadeInLight" : "pokeFadeOut")}>
             
                     <img src={Empty} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
 
                 <NesContainer title="March 2020" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
-                        As a virus spread around the globe, families shut their doors and the world went black. In the middle of so much bad news, we've been blessed with some good news.
+                        As the world locked themselves inside, 
                     </p>
                 </NesContainer>
                 <div style={{

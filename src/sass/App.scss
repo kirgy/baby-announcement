@@ -18,13 +18,13 @@ body {
     &.light-animate {
       opacity: 1;
       background-color: #000;
-      animation: pokeFadeLight 2s forwards;
+      animation: pokeFadeOutLight 2s forwards;
       animation-delay: 0s;
     }
 
     &.dark-animate {
       opacity: 0;
-      animation: pokeFadeIn 1s forwards;
+      animation: pokeFadeInLight 1s forwards;
       animation-delay: 1s;
       background-color: #000;
     }

@@ -19,14 +19,12 @@
 
 .scene-virus .caption {
   opacity: 0; }
-
-.scene-virus .caption.animate {
-  animation: animateCaption 2s forwards;
-  animation-delay: 1s; }
+  .scene-virus .caption.animate {
+    animation: animateCaption 2s forwards;
+    animation-delay: 1s; }
 
 .scene-virus .cta {
   opacity: 0; }
-
-.scene-virus .cta.animate {
-  animation: animateCTA 1s forwards;
-  animation-delay: 6s; }
+  .scene-virus .cta.animate {
+    animation: animateCTA 1s forwards;
+    animation-delay: 6s; }
