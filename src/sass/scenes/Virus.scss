@@ -1,5 +1,9 @@
 .scene-virus {
-    
+    $animation-caption-duration: 2s;
+    $animation-caption-start: 1s;
+    $animation-cta-start: 6s;
+    $animation-cta-duration: 1s;
+  
     .virus {
         width: 200vh;
         height: 200vh;
@@ -25,5 +29,21 @@
             border-color: #efefef;
         }        
     }
+
+    .caption {
+        opacity: 0;
+        &.animate {
+          animation: animateCaption $animation-caption-duration forwards;
+          animation-delay: $animation-caption-start;
+        }
+      }
+      
+      .cta {
+        opacity: 0;
+        &.animate {
+          animation: animateCTA $animation-cta-duration forwards;
+          animation-delay: $animation-cta-start;
+        }
+      }
 
 }

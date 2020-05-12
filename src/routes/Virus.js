@@ -56,7 +56,7 @@ export default class Virus extends Component {
                 }}
                     className={"cta "+(this.state.stageReady ? "animate" : "")}
                 >
-                    <DelayLink delay={2000} to="/house" replace={false}>
+                    <DelayLink delay={2000} to="/now" replace={false}>
                         <Button primary="true" style={{
                             "margin-right":  "right"
                         }} onClick={() => this.navAction(this)}>

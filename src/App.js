@@ -18,17 +18,6 @@ import Baby from "./routes/Baby";
 import Background from "./images/background.png";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    // const {pathname} = props.location;
-    // console.log(pathname);
-  }
-
-  render() {
-    return(<AppInner {...this.props}  location={this.props.location} />);
-  }
-}
-class AppInner extends Component {
 
   state = {
     devMenuOpen: false
@@ -50,18 +39,9 @@ class AppInner extends Component {
         top: 0,
         width: "100%",
         height: "100%",
-        backgroundColor: ((this.props.location.pathname === "/virus") ? '#000' : '#fff'),
 
       }}>
-        <div style={{
-          // backgroundImage: `url(${Background})`,
-          left: 0,
-          top: 0,
-          width: "100%",
-          height: "100%",
-          backgroundSize: "cover",
-          opacity: 0.2
-        }}></div>
+
         <Router>
           {/* <div style={{
               position: "fixed",
@@ -103,54 +83,92 @@ class AppInner extends Component {
                                        
             </div>
           </div> */}
-          <div style={{
-            position: "absolute",
-            top: "50%",
-            "-ms-transform": "translateY(-50%)",
-            transform: "translateY(-50%)",
-            left: 0,
-            overflow: "hidden",
-            width: "100%",
-            padding: "2em 1em",
-          }}>
-            <div style={{
-              "max-width": "750px",
-              margin: "0 auto",
-            }}>
               <Switch>
                 <Route path="/about">
-                  <About />
+                  <div className="app-wrapper">
+                      <div className="route-outer-wrapper">
+                        <div className="route-inner-wrapper">                  
+                          <About />
+                        </div>
+                      </div>
+                    </div>
                 </Route>
                 <Route path="/users">
-                  <Users />
+                  <div className="app-wrapper">
+                    <div className="route-outer-wrapper">
+                      <div className="route-inner-wrapper">                  
+                        <Users />
+                      </div>
+                    </div>                              
+                  </div>                              
                 </Route>
                 <Route path="/meet">
-                  <Meet />                  
+                  <div className="app-wrapper">
+                    <div className="route-outer-wrapper">
+                      <div className="route-inner-wrapper">                  
+                        <Meet />     
+                      </div>
+                    </div>
+                  </div>
                 </Route>
                 <Route path="/engagement">
-                  <Engagement />
+                  <div className="app-wrapper">
+                    <div className="route-outer-wrapper">
+                      <div className="route-inner-wrapper">                  
+                      <Engagement />
+                      </div>
+                    </div>
+                  </div>
                 </Route>
                 <Route path="/Wedding">
-                  <Wedding />
+                  <div className="app-wrapper">
+                    <div className="route-outer-wrapper">
+                      <div className="route-inner-wrapper">                  
+                        <Wedding />
+                      </div>
+                    </div>
+                  </div>
                 </Route>
                 <Route path="/house">
-                  <House />
+                  <div className="app-wrapper">
+                    <div className="route-outer-wrapper">
+                      <div className="route-inner-wrapper">                  
+                        <House />
+                      </div>
+                    </div>
+                  </div>
                 </Route>
                 <Route path="/virus">
-                  <Virus />
+                  <div className="app-wrapper dark-animate">
+                    <div className="route-outer-wrapper">
+                      <div className="route-inner-wrapper">                  
+                        <Virus />
+                      </div>
+                    </div>
+                  </div>
                 </Route>                
                 <Route path="/now">
-                  <Baby />
+                  <div className="app-wrapper light-animate">
+                    <div className="route-outer-wrapper">
+                      <div className="route-inner-wrapper">                  
+                        <Baby />
+                      </div>
+                    </div>
+                  </div>
                 </Route>                                                                
                 <Route path="/">
-                  <Meet />
+                  <div className="app-wrapper">
+                    <div className="route-outer-wrapper">
+                      <div className="route-inner-wrapper">                  
+                        <Meet />
+                      </div>
+                    </div>
+                  </div>
                 </Route>                                      
                 {/* <Route path="/404">
                   <ErrorNotFound />
                 </Route>                 */}
               </Switch>  
-            </div>
-          </div>
         </Router>
       </div>
     );

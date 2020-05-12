@@ -25,6 +25,9 @@
     opacity: 0.25; }
   95% {
     filter: contrast(0) brightness(3);
+    opacity: 0; }
+  100% {
+    filter: contrast(0) brightness(3);
     opacity: 0; } }
 
 @keyframes pokeFadeIn {
@@ -59,6 +62,39 @@
     filter: contrast(1) brightness(1);
     opacity: 1; } }
 
+@keyframes pokeFadeLight {
+  0% {
+    filter: contrast(1) brightness(1);
+    opacity: 1; }
+  24% {
+    filter: contrast(1) brightness(1);
+    opacity: 1; }
+  25% {
+    filter: contrast(0.5) brightness(1.5);
+    opacity: 0.75; }
+  49% {
+    filter: contrast(0.5) brightness(1.5);
+    opacity: 0.75; }
+  50% {
+    filter: contrast(0.25) brightness(2);
+    opacity: 0.5; }
+  74% {
+    filter: contrast(0.25) brightness(2);
+    opacity: 0.5; }
+  75% {
+    filter: contrast(0.175) brightness(2);
+    opacity: 0.25; }
+  94% {
+    filter: contrast(0.175) brightness(2);
+    opacity: 0.25; }
+  95% {
+    filter: contrast(0) brightness(3);
+    opacity: 0; }
+  100% {
+    filter: contrast(1) brightness(1);
+    opacity: 1;
+    background-color: #fff; } }
+
 @keyframes animateCaption {
   0% {
     opacity: 0; }
@@ -81,27 +117,31 @@
   opacity: 0;
   left: 85.1%;
   top: 116%; }
-  .scene-meet .spark.animate {
-    animation: animateSpark 4s; }
+
+.scene-meet .spark.animate {
+  animation: animateSpark 4s; }
 
 .scene-meet .monitor {
   opacity: 0;
   left: 77%;
   top: 118.6%; }
-  .scene-meet .monitor.animate {
-    animation: animateMonitors 4s forwards; }
+
+.scene-meet .monitor.animate {
+  animation: animateMonitors 4s forwards; }
 
 .scene-meet .caption {
   opacity: 0; }
-  .scene-meet .caption.animate {
-    animation: animateCaption 2s forwards;
-    animation-delay: 4s; }
+
+.scene-meet .caption.animate {
+  animation: animateCaption 2s forwards;
+  animation-delay: 4s; }
 
 .scene-meet .cta {
   opacity: 0; }
-  .scene-meet .cta.animate {
-    animation: animateCTA 1s forwards;
-    animation-delay: 8s; }
+
+.scene-meet .cta.animate {
+  animation: animateCTA 1s forwards;
+  animation-delay: 8s; }
 
 @keyframes animateSpark {
   0% {
@@ -170,20 +210,23 @@
   opacity: 0;
   left: 70%;
   top: 60%; }
-  .scene-engagement .exclamation-bubble.animate {
-    animation: animateExclamation 2s forwards; }
+
+.scene-engagement .exclamation-bubble.animate {
+  animation: animateExclamation 2s forwards; }
 
 .scene-engagement .caption {
   opacity: 0; }
-  .scene-engagement .caption.animate {
-    animation: animateCaption 2s forwards;
-    animation-delay: 2s; }
+
+.scene-engagement .caption.animate {
+  animation: animateCaption 2s forwards;
+  animation-delay: 2s; }
 
 .scene-engagement .cta {
   opacity: 0; }
-  .scene-engagement .cta.animate {
-    animation: animateCTA 1s forwards;
-    animation-delay: 5s; }
+
+.scene-engagement .cta.animate {
+  animation: animateCTA 1s forwards;
+  animation-delay: 5s; }
 
 @keyframes animateExclamation {
   0% {
@@ -217,21 +260,24 @@
   top: 50%;
   left: 50%;
   opacity: 0; }
-  .scene-wedding .confetti.animate {
-    animation: pokeFadeIn 2s forwards;
-    animation-delay: 0.5s; }
+
+.scene-wedding .confetti.animate {
+  animation: pokeFadeIn 2s forwards;
+  animation-delay: 0.5s; }
 
 .scene-wedding .caption {
   opacity: 0; }
-  .scene-wedding .caption.animate {
-    animation: animateCaption 2s forwards;
-    animation-delay: 3s; }
+
+.scene-wedding .caption.animate {
+  animation: animateCaption 2s forwards;
+  animation-delay: 3s; }
 
 .scene-wedding .cta {
   opacity: 0; }
-  .scene-wedding .cta.animate {
-    animation: animateCTA 1s forwards;
-    animation-delay: 5s; }
+
+.scene-wedding .cta.animate {
+  animation: animateCTA 1s forwards;
+  animation-delay: 5s; }
 
 /**
   * Meet
@@ -241,31 +287,35 @@
 
 .scene-house .caption {
   opacity: 0; }
-  .scene-house .caption.animate {
-    animation: animateCaption 1s forwards;
-    animation-duration: 2s; }
+
+.scene-house .caption.animate {
+  animation: animateCaption 1s forwards;
+  animation-duration: 2s; }
 
 .scene-house .cta {
   opacity: 0; }
-  .scene-house .cta.animate {
-    animation: animateCTA 1s forwards;
-    animation-delay: 9s; }
+
+.scene-house .cta.animate {
+  animation: animateCTA 1s forwards;
+  animation-delay: 9s; }
 
 .scene-house .chimney {
   left: 0%;
   top: 0%;
   transform-origin: 63.4% 31.4%;
   transform: rotate(0deg); }
-  .scene-house .chimney.animate {
-    animation: animateChimney 6s forwards;
-    animation-delay: 1s;
-    animation-timing-function: ease-in; }
+
+.scene-house .chimney.animate {
+  animation: animateChimney 6s forwards;
+  animation-delay: 1s;
+  animation-timing-function: ease-in; }
 
 .scene-house .further-text {
   opacity: 0; }
-  .scene-house .further-text.animate {
-    animation: pokeFadeIn 1s forwards;
-    animation-delay: 8s; }
+
+.scene-house .further-text.animate {
+  animation: pokeFadeIn 1s forwards;
+  animation-delay: 8s; }
 
 .scene-house .house-overlay {
   left: 50%;
@@ -309,10 +359,54 @@
 .scene-virus .nes-container::after {
   border-color: #efefef; }
 
+.scene-virus .caption {
+  opacity: 0; }
+
+.scene-virus .caption.animate {
+  animation: animateCaption 2s forwards;
+  animation-delay: 1s; }
+
+.scene-virus .cta {
+  opacity: 0; }
+
+.scene-virus .cta.animate {
+  animation: animateCTA 1s forwards;
+  animation-delay: 6s; }
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif; }
+
+.app-wrapper {
+  width: 100%;
+  height: 100%; }
+
+.app-wrapper.light-animate {
+  opacity: 1;
+  background-color: #000;
+  animation: pokeFadeLight 2s forwards;
+  animation-delay: 0s; }
+
+.app-wrapper.dark-animate {
+  opacity: 0;
+  animation: pokeFadeIn 1s forwards;
+  animation-delay: 1s;
+  background-color: #000; }
+
+.route-outer-wrapper {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  padding: 2em 1em; }
+
+.route-outer-wrapper .route-inner-wrapper {
+  max-width: 750px;
+  margin: 0 auto; }
 
 .example-enter {
   opacity: 0.01; }
