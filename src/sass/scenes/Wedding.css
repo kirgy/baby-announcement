@@ -8,21 +8,18 @@
   top: 50%;
   left: 50%;
   opacity: 0; }
-
-.scene-wedding .confetti.animate {
-  animation: pokeFadeIn 2s forwards;
-  animation-delay: 0.5s; }
+  .scene-wedding .confetti.animate {
+    animation: pokeFadeIn 2s forwards;
+    animation-delay: 0.5s; }
 
 .scene-wedding .caption {
   opacity: 0; }
-
-.scene-wedding .caption.animate {
-  animation: animateCaption 2s forwards;
-  animation-delay: 3s; }
+  .scene-wedding .caption.animate {
+    animation: animateCaption 2s forwards;
+    animation-delay: 3s; }
 
 .scene-wedding .cta {
   opacity: 0; }
-
-.scene-wedding .cta.animate {
-  animation: animateCTA 1s forwards;
-  animation-delay: 5s; }
+  .scene-wedding .cta.animate {
+    animation: animateCTA 1s forwards;
+    animation-delay: 5s; }

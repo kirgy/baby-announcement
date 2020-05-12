@@ -12,17 +12,37 @@ import Meet from "./routes/Meet";
 import Engagement from "./routes/Engagement";
 import Wedding from "./routes/Wedding";
 import House from "./routes/House";
+import Virus from "./routes/Virus";
 import Baby from "./routes/Baby";
 // import ErrorNotFound from "./routes/404";
 import Background from "./images/background.png";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    // const {pathname} = props.location;
+    // console.log(pathname);
+  }
+
+  render() {
+    return(<AppInner {...this.props}  location={this.props.location} />);
+  }
+}
+class AppInner extends Component {
 
   state = {
     devMenuOpen: false
   }
 
+  constructor(props) {
+    super(props);
+    // const {pathname} = props.location;
+    // console.log(pathname);
+  }
+
   render() {
+    console.log(this.props)
+
     return (
       <div className="App" style={{
         position: "absolute",
@@ -30,6 +50,8 @@ class App extends Component {
         top: 0,
         width: "100%",
         height: "100%",
+        backgroundColor: ((this.props.location.pathname === "/virus") ? '#000' : '#fff'),
+
       }}>
         <div style={{
           // backgroundImage: `url(${Background})`,
@@ -41,7 +63,7 @@ class App extends Component {
           opacity: 0.2
         }}></div>
         <Router>
-          <div style={{
+          {/* <div style={{
               position: "fixed",
               top: 0,
               right: 0,
@@ -68,6 +90,9 @@ class App extends Component {
                         <Link to="/house">House</Link>
                       </li>                    
                       <li>
+                        <Link to="/virus">Virus</Link>
+                      </li>                    
+                      <li>
                         <Link to="/now">Now</Link>
                       </li>
                       <li>
@@ -77,8 +102,7 @@ class App extends Component {
                   </nav>
                                        
             </div>
-          </div>
-
+          </div> */}
           <div style={{
             position: "absolute",
             top: "50%",
@@ -112,6 +136,9 @@ class App extends Component {
                 <Route path="/house">
                   <House />
                 </Route>
+                <Route path="/virus">
+                  <Virus />
+                </Route>                
                 <Route path="/now">
                   <Baby />
                 </Route>                                                                

@@ -5,13 +5,10 @@ import {
     BrowserRouter as Router,
     Link
 } from "react-router-dom";
+import Empty from "../images/Virus/empty.png";
 import DelayLink from 'react-delay-link';
-import Couple from "../images/House/couple-house.gif";
-import Chimney from "../images/House/chimney-overlay.png";
-import HouseOverlay from "../images/House/house-overlay.png";
-import Dot from "../images/House/dot.png";
 
-export default class House extends Component {
+export default class Virus extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -44,18 +41,13 @@ export default class House extends Component {
         return (
             <div style={{
                 padding: "2em"
-            }} className={"scene-house "+(this.state.showChars ? "pokeFadeIn" : "pokeFadeOut")}>
-                <div style={{
-                    position: "relative",
-                }}>
-                    <img src={Couple} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
-                    <img src={Chimney} className={"scene-animatable chimney "+(this.state.stageReady ? "animate" : "")} />
-                    <img src={HouseOverlay} className={"scene-animatable house-overlay "+(this.state.stageReady ? "animate" : "")} />
-                </div>
+            }} className={"scene-virus "+(this.state.showChars ? "pokeFadeIn" : "pokeFadeOut")}>
+            
+                    <img src={Empty} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
 
-                <NesContainer title="2018" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
+                <NesContainer title="March 2020" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
-                        After a lot of hard work we bought our very own house to make our home...<span className={"further-text "+(this.state.stageReady ? "animate" : "")}>it's a fixer-upper.</span>
+                        As a virus spread around the globe, families shut their doors and the world went black. In the middle of so much bad news, we've been blessed with some good news.
                     </p>
                 </NesContainer>
                 <div style={{
@@ -64,16 +56,15 @@ export default class House extends Component {
                 }}
                     className={"cta "+(this.state.stageReady ? "animate" : "")}
                 >
-                    <DelayLink delay={2000} to="/virus" replace={false}>
+                    <DelayLink delay={2000} to="/house" replace={false}>
                         <Button primary="true" style={{
                             "margin-right":  "right"
                         }} onClick={() => this.navAction(this)}>
                             Next
                         </Button>
                     </DelayLink>
-                </div>     
+                </div>
             </div>
         )
     }
-
 }
