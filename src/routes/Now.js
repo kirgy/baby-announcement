@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import DelayLink from 'react-delay-link';
 import Couple from "../images/Now/couple.gif";
-import Hand from "../images/Now/hand.png";
+import Hand from "../images/Now/hand.gif";
 import Blank from "../images/Now/blank.png";
 import moment from "moment";
 
@@ -77,9 +77,6 @@ export default class Now extends Component {
                 }} className="">
                     <img src={Couple} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
                     <img src={Hand} className={"hand "+(this.state.stageReady ? "animate" : "")} />
-                    <div className={"hand-pulse "+(this.state.stageReady ? "animate" : "")}>
-                        <img src={Blank}/>
-                    </div>
                     <div className={"progress-bar-container rest-top "+(this.state.stageReady ? "animate" : "")} >
                         <p className={"loading-title"}>
                             <span className={"loading-out "+(this.state.stageReady ? "animate" : "")}>
@@ -163,7 +160,7 @@ export default class Now extends Component {
                         <Button primary="true" className="float-right" style={{
                             "margin-right":  "left"
                         }} onClick={() => this.toggleShare(this)}>
-                            {this.state.shareOpen ? "Close" : "Open"}
+                            {this.state.shareOpen ? "Close share" : "Share"}
                         </Button>
                     </div>
                 </div>                

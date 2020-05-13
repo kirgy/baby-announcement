@@ -209,6 +209,11 @@
         animation: animationPulse $animation-hand-duration infinite;
         animation-delay: $animation-hand-start;
 
+        &.animate-fade-in {
+            animation: pokeFadeIn $animation-hand-duration forwards;
+            animation-delay: $animation-hand-start;
+          }
+
         &.animate {
             animation: pokeFadeIn $animation-hand-duration forwards;
             animation-delay: $animation-hand-start;
@@ -389,17 +394,17 @@
     @keyframes animationPulse {
         0% {
             transform: scale(0.95);
-            box-shadow: 0 0 0 0 rgba(33, 156, 238, 0.7);
+            box-shadow: 0 0 0 0 rgba(33, 156, 238, 0.8);
         }
 
         70% {
             transform: scale(1);
-            box-shadow: 0 0 0 10px rgba(33, 156, 238, 0);
+            box-shadow: 0 0 0 10px rgba(33, 156, 238, 0.2);
         }
 
         100% {
             transform: scale(0.95);
-            box-shadow: 0 0 0 0 rgba(33, 156, 238, 0);
+            box-shadow: 0 0 0 0 rgba(33, 156, 238, 0.2);
         }    
     }
     

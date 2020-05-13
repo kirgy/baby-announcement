@@ -512,6 +512,10 @@
   animation: animationPulse 1s infinite;
   animation-delay: 22s; }
 
+.scene-now .hand-pulse.animate-fade-in {
+  animation: pokeFadeIn 1s forwards;
+  animation-delay: 22s; }
+
 .scene-now .hand-pulse.animate {
   animation: pokeFadeIn 1s forwards;
   animation-delay: 22s; }
@@ -641,13 +645,13 @@
 @keyframes animationPulse {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(33, 156, 238, 0.7); }
+    box-shadow: 0 0 0 0 rgba(33, 156, 238, 0.8); }
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(33, 156, 238, 0); }
+    box-shadow: 0 0 0 10px rgba(33, 156, 238, 0.2); }
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(33, 156, 238, 0); } }
+    box-shadow: 0 0 0 0 rgba(33, 156, 238, 0.2); } }
 
 body {
   margin: 0;
