@@ -390,7 +390,12 @@
   */
 .scene-now .couple {
   width: 100%;
-  opacity: 0; }
+  opacity: 0;
+  margin-top: 120px; }
+
+.scene-now .couple.animate {
+  animation: pokeFadeIn 1s forwards;
+  animation-delay: 18s; }
 
 .scene-now .progress-bar-container {
   padding-right: 7px;
@@ -399,12 +404,23 @@
   position: absolute;
   margin-top: -24px; }
 
+.scene-now .progress-bar-container.rest-top.animate {
+  animation: animateProgressBarMoveTop 1s forwards;
+  animation-delay: 17s; }
+
 .scene-now .loading-title {
   opacity: 0; }
 
 .scene-now .loading-title.animate {
   animation: pokeFadeIn 1s forwards;
   animation-delay: 0s; }
+
+.scene-now .loading-title .days-remaining {
+  opacity: 0; }
+
+.scene-now .loading-title .days-remaining.animate {
+  animation: pokeFadeIn 1s forwards;
+  animation-delay: 16s; }
 
 .scene-now .progress-bar {
   opacity: 0;
@@ -448,15 +464,21 @@
   opacity: 0; }
 
 .scene-now .caption.animate {
-  animation: animateCaption 2s forwards;
-  animation-delay: 2s; }
+  animation: animateCaption 1s forwards;
+  animation-delay: 19s; }
 
 .scene-now .cta {
   opacity: 0; }
 
 .scene-now .cta.animate {
   animation: animateCTA 1s forwards;
-  animation-delay: 5s; }
+  animation-delay: 22s; }
+
+.scene-now .cta .button-wrapper {
+  padding-right: 1em; }
+
+.scene-now .cta .button-wrapper:first-child {
+  padding-right: 0; }
 
 @keyframes animateProgress {
   0% {
@@ -483,7 +505,12 @@
     width: 0%;
     display: none; } }
 
-@keyframes animateProgressMeterFinal {}body {
+@keyframes animateProgressBarMoveTop {
+  100% {
+    top: 0;
+    margin-top: 0; } }
+
+body {
   margin: 0;
   padding: 0;
   font-family: sans-serif; }

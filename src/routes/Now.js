@@ -6,7 +6,7 @@ import {
     Link
 } from "react-router-dom";
 import DelayLink from 'react-delay-link';
-import Couple from "../images/Engagement/couple-engagement.gif";
+import Couple from "../images/Now/couple.png";
 import moment from "moment";
 
 export default class Now extends Component {
@@ -67,9 +67,9 @@ export default class Now extends Component {
                     position: "relative",
                 }} className="">
                     <img src={Couple} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
-                    <div className={"progress-bar-container"}>
+                    <div className={"progress-bar-container rest-top "+(this.state.stageReady ? "animate" : "")} >
                         <p className={"loading-title "+(this.state.stageReady ? "animate" : "")} >
-                            Loading...
+                            Loading...<span className={"days-remaining  "+(this.state.stageReady ? "animate" : "")} >{this.state.dueInDays} days remaining</span>
                         </p>
                         <div className={"progress-bar "+(this.state.stageReady ? "animate" : "")} >
                             {(!this.state.progressBarDone) 
@@ -82,9 +82,9 @@ export default class Now extends Component {
                     </div>
                 </div>
 
-                <NesContainer title="2012" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
+                <NesContainer title="November 2020" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
-                        After 4 years we decided we we're the humans we wanted to spend our lives with.
+                        We're excited to announce baby McKirgan, hatching November 2020
                     </p>
                 </NesContainer>
                 <div style={{
@@ -93,13 +93,24 @@ export default class Now extends Component {
                 }}
                     className={"cta "+(this.state.stageReady ? "animate" : "")}
                 >
-                    <DelayLink delay={2000} to="/wedding" replace={false}>
-                        <Button primary="true" style={{
-                            "margin-right":  "right"
-                        }} onClick={() => this.navAction(this)}>
-                            Next
-                        </Button>
-                    </DelayLink>
+                    <div className="button-wrapper float-right">
+                        <DelayLink delay={2000} to="/" replace={false}>
+                            <Button primary="true" style={{
+                                "margin-right":  "left"
+                            }} onClick={() => this.navAction(this)}>
+                                Replay
+                            </Button>
+                        </DelayLink>
+                    </div>
+                    <div className="button-wrapper float-right">
+                        <DelayLink delay={2000} to="/" replace={false} className="float-right">
+                            <Button primary="true" style={{
+                                "margin-right":  "left"
+                            }} onClick={() => this.navAction(this)}>
+                                Share
+                            </Button>
+                        </DelayLink>
+                    </div>
                 </div>                
             </div>
         );

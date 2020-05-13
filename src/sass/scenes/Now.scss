@@ -3,10 +3,6 @@
   */
   .scene-now {
     $animation-duration: 2s;
-    $animation-caption-duration: 2s;
-    $animation-caption-start: 2s;
-    $animation-cta-start: 5s;
-    $animation-cta-duration: 1s;
 
     // loading text
     $animation-loading-text-duration: 1s;
@@ -22,15 +18,37 @@
 
     // progress bar meter final
     $animation-progress-meter-final-duration: 1s;
-    $animation-progress-meter-final-start: 15s;
+    $animation-progress-meter-final-start: $animation-progress-meter-duration + $animation-progress-meter-start;
 
+    // days remaining
+    $animation-days-remaining-duration: 1s;
+    $animation-days-remaining-start: $animation-progress-meter-final-start + $animation-progress-meter-final-duration;
+
+    // rest top
+    $animation-rest-top-duration: 1s;
+    $animation-rest-top-start: $animation-days-remaining-start + $animation-days-remaining-duration;
+
+    // couple
+    $animation-couple-duration: 1s;
+    $animation-couple-start: $animation-rest-top-start + $animation-rest-top-duration;
+
+    // caption
+    $animation-caption-duration: 1s;
+    $animation-caption-start: $animation-couple-start + $animation-couple-duration;
+
+    // cta
+    $animation-cta-duration: 1s;    
+    $animation-cta-start: $animation-caption-start + $animation-caption-duration + 2s;
+    
     .couple {
       width: 100%;
       opacity: 0;
-    //   &.animate {
-    //     animation: animateCaption $animation-caption-duration forwards;
-    //     animation-delay: $animation-caption-start;
-    //   }      
+      margin-top: 120px;
+
+      &.animate {
+        animation: pokeFadeIn $animation-couple-duration forwards;
+        animation-delay: $animation-couple-start;
+      }      
     }
 
     .progress-bar-container {
@@ -39,6 +57,13 @@
         top: 50%;
         position: absolute;
         margin-top: -24px;
+
+        &.rest-top {
+            &.animate {
+                animation: animateProgressBarMoveTop $animation-rest-top-duration forwards;
+                animation-delay: $animation-rest-top-start;
+            }
+        }        
     }
 
     .loading-title {
@@ -47,6 +72,16 @@
         &.animate {
             animation: pokeFadeIn $animation-loading-text-duration forwards;
             animation-delay: $animation-loading-text-start;
+        }
+
+        .days-remaining {
+            opacity: 0;
+
+            &.animate {
+                animation: pokeFadeIn $animation-days-remaining-duration forwards;
+                animation-delay: $animation-days-remaining-start;
+                
+            }
         }
     }
 
@@ -112,6 +147,14 @@
         animation: animateCTA $animation-cta-duration forwards;
         animation-delay: $animation-cta-start;
       }
+
+      .button-wrapper {
+          padding-right: 1em;
+
+          &:first-child {
+            padding-right: 0;
+          }
+      }
     }
 
 
@@ -145,26 +188,18 @@
         }
         80% {
             width: 0%;
-            // display: none;
         }                
         100% {
             width: 0%;
-            // height: 0%;
             display: none;
-        }                        
-        // 100% {
-        //     opacity: 1;
-        //     width: 100%;
-        // }
+        }
     }
 
-    @keyframes animateProgressMeterFinal {
-        // 100% {
-        //     // display: block;
-        // }                     
-        // 100% {
-        //     // display: block;
-        // }                        
+    @keyframes animateProgressBarMoveTop {          
+        100% {
+            top: 0;
+            margin-top: 0;
+        }                        
     }    
   }  
   

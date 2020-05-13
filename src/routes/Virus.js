@@ -47,7 +47,7 @@ export default class Virus extends Component {
 
                 <NesContainer title="March 2020" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
-                        As the world locked themselves inside, 
+                        Suddenly the world has become filled with such bad news, but the whole time we've been keeping secret some good news.
                     </p>
                 </NesContainer>
                 <div style={{
