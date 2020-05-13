@@ -5,21 +5,19 @@
   width: 100%;
   opacity: 0;
   margin-top: 120px; }
-
-.scene-now .couple.animate {
-  animation: pokeFadeIn 1s forwards;
-  animation-delay: 18s; }
+  .scene-now .couple.animate {
+    animation: pokeFadeIn 1s forwards;
+    animation-delay: 18s; }
 
 .scene-now .clickable {
   width: 100%;
   top: 50%;
   left: 5000%;
   height: 100%; }
-
-.scene-now .clickable.animate {
-  left: 50%;
-  animation: animateClickable 1s forwards;
-  animation-delay: 22s; }
+  .scene-now .clickable.animate {
+    left: 50%;
+    animation: animateClickable 1s forwards;
+    animation-delay: 22s; }
 
 .scene-now .progress-bar-container {
   padding-right: 7px;
@@ -27,35 +25,28 @@
   top: 50%;
   position: absolute;
   margin-top: -24px; }
-
-.scene-now .progress-bar-container.rest-top.animate {
-  animation: animateProgressBarMoveTop 1s forwards;
-  animation-delay: 17s; }
+  .scene-now .progress-bar-container.rest-top.animate {
+    animation: animateProgressBarMoveTop 1s forwards;
+    animation-delay: 17s; }
 
 .scene-now .loading-title {
   text-align: center; }
-
-.scene-now .loading-title .loading-in {
-  opacity: 0;
-  display: none; }
-
-.scene-now .loading-title .loading-in.animate {
-  animation: pokeFadeInDisplayNone 1s forwards;
-  animation-delay: 0s; }
-
-.scene-now .loading-title .loading-out {
-  opacity: 1; }
-
-.scene-now .loading-title .loading-out.animate {
-  animation: pokeFadeOutDisplayNone 1s forwards;
-  animation-delay: 15s; }
-
-.scene-now .loading-title .days-remaining {
-  opacity: 0; }
-
-.scene-now .loading-title .days-remaining.animate {
-  animation: pokeFadeIn 1s forwards;
-  animation-delay: 16s; }
+  .scene-now .loading-title .loading-in {
+    opacity: 0;
+    display: none; }
+    .scene-now .loading-title .loading-in.animate {
+      animation: pokeFadeInDisplayNone 1s forwards;
+      animation-delay: 0s; }
+  .scene-now .loading-title .loading-out {
+    opacity: 1; }
+    .scene-now .loading-title .loading-out.animate {
+      animation: pokeFadeOutDisplayNone 1s forwards;
+      animation-delay: 15s; }
+  .scene-now .loading-title .days-remaining {
+    opacity: 0; }
+    .scene-now .loading-title .days-remaining.animate {
+      animation: pokeFadeIn 1s forwards;
+      animation-delay: 16s; }
 
 .scene-now .progress-bar {
   opacity: 0;
@@ -76,44 +67,36 @@
   margin-bottom: 1.5rem !important;
   border-style: solid;
   border-width: 4px; }
-
-.scene-now .progress-bar .progress-meter, .scene-now .progress-bar .progress-meter-final {
-  background-color: #000;
-  height: 100%;
-  width: 0%; }
-
-.scene-now .progress-bar.animate {
-  animation: pokeFadeIn 1s forwards;
-  animation-delay: 0s; }
-
-.scene-now .progress-bar.animate .progress-meter {
-  animation: animateProgressMeter 12s forwards;
-  animation-delay: 3s; }
-
-.scene-now .progress-bar.animate .progress-meter-final {
-  transition: width 1s ease;
-  animation: animateProgressMeterFinal 1s forwards;
-  animation-delay: 15s; }
+  .scene-now .progress-bar .progress-meter, .scene-now .progress-bar .progress-meter-final {
+    background-color: #000;
+    height: 100%;
+    width: 0%; }
+  .scene-now .progress-bar.animate {
+    animation: pokeFadeIn 1s forwards;
+    animation-delay: 0s; }
+    .scene-now .progress-bar.animate .progress-meter {
+      animation: animateProgressMeter 12s forwards;
+      animation-delay: 3s; }
+    .scene-now .progress-bar.animate .progress-meter-final {
+      transition: width 1s ease;
+      animation: animateProgressMeterFinal 1s forwards;
+      animation-delay: 15s; }
 
 .scene-now .caption {
   opacity: 0; }
-
-.scene-now .caption.animate {
-  animation: animateCaption 1s forwards;
-  animation-delay: 19s; }
+  .scene-now .caption.animate {
+    animation: animateCaption 1s forwards;
+    animation-delay: 19s; }
 
 .scene-now .cta {
   opacity: 0; }
-
-.scene-now .cta.animate {
-  animation: animateCTA 1s forwards;
-  animation-delay: 22s; }
-
-.scene-now .cta .button-wrapper {
-  padding-right: 1em; }
-
-.scene-now .cta .button-wrapper:first-child {
-  padding-right: 0; }
+  .scene-now .cta.animate {
+    animation: animateCTA 1s forwards;
+    animation-delay: 22s; }
+  .scene-now .cta .button-wrapper {
+    padding-right: 1em; }
+    .scene-now .cta .button-wrapper:first-child {
+      padding-right: 0; }
 
 .scene-now .hand {
   opacity: 0;
@@ -121,10 +104,9 @@
   left: 64%;
   bottom: 5%;
   position: absolute; }
-
-.scene-now .hand.animate {
-  animation: pokeFadeIn 1s forwards;
-  animation-delay: 22s; }
+  .scene-now .hand.animate {
+    animation: pokeFadeIn 1s forwards;
+    animation-delay: 22s; }
 
 .scene-now .hand-pulse {
   opacity: 0;
@@ -135,14 +117,12 @@
   border-radius: 45px;
   animation: animationPulse 1s infinite;
   animation-delay: 22s; }
-
-.scene-now .hand-pulse.animate-fade-in {
-  animation: pokeFadeIn 1s forwards;
-  animation-delay: 22s; }
-
-.scene-now .hand-pulse.animate {
-  animation: pokeFadeIn 1s forwards;
-  animation-delay: 22s; }
+  .scene-now .hand-pulse.animate-fade-in {
+    animation: pokeFadeIn 1s forwards;
+    animation-delay: 22s; }
+  .scene-now .hand-pulse.animate {
+    animation: pokeFadeIn 1s forwards;
+    animation-delay: 22s; }
 
 .scene-now .share-modal {
   position: absolute;
@@ -152,23 +132,18 @@
   left: 0;
   background: #fff;
   padding-right: 1em; }
-
-.scene-now .share-modal .nes-balloon {
-  width: 100%;
-  height: 100%;
-  overflow: scroll; }
-
-.scene-now .share-modal .icon-list {
-  margin-bottom: 1em; }
-
-.scene-now .share-modal .icon-list a {
-  margin: 0.5em; }
-
-.scene-now .share-modal .icon-list a:first-child {
-  margin-left: 0; }
-
-.scene-now .share-modal .icon-list a:last-child {
-  margin-right: 0; }
+  .scene-now .share-modal .nes-balloon {
+    width: 100%;
+    height: 100%;
+    overflow: scroll; }
+  .scene-now .share-modal .icon-list {
+    margin-bottom: 1em; }
+    .scene-now .share-modal .icon-list a {
+      margin: 0.5em; }
+      .scene-now .share-modal .icon-list a:first-child {
+        margin-left: 0; }
+      .scene-now .share-modal .icon-list a:last-child {
+        margin-right: 0; }
 
 .scene-now .baby-scan {
   width: 50%;
