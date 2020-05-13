@@ -397,6 +397,17 @@
   animation: pokeFadeIn 1s forwards;
   animation-delay: 18s; }
 
+.scene-now .clickable {
+  width: 100%;
+  top: 50%;
+  left: 5000%;
+  height: 100%; }
+
+.scene-now .clickable.animate {
+  left: 50%;
+  animation: animateClickable 1s forwards;
+  animation-delay: 22s; }
+
 .scene-now .progress-bar-container {
   padding-right: 7px;
   width: 100%;
@@ -494,7 +505,7 @@
 .scene-now .hand {
   opacity: 0;
   width: 10%;
-  left: 49%;
+  left: 64%;
   bottom: 5%;
   position: absolute; }
 
@@ -531,7 +542,8 @@
 
 .scene-now .share-modal .nes-balloon {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: scroll; }
 
 .scene-now .share-modal .icon-list {
   margin-bottom: 1em; }
@@ -544,6 +556,10 @@
 
 .scene-now .share-modal .icon-list a:last-child {
   margin-right: 0; }
+
+.scene-now .baby-scan {
+  width: 50%;
+  margin: 0 auto; }
 
 @keyframes animateProgress {
   0% {
@@ -653,10 +669,20 @@
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(33, 156, 238, 0.2); } }
 
+@keyframes animateClickable {
+  100% {
+    left: 50%; } }
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif; }
+
+p {
+  font-size: 0.8em; }
+
+button.nes-btn {
+  font-size: 0.8em; }
 
 .app-wrapper {
   width: 100%;

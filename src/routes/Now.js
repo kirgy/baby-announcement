@@ -9,6 +9,7 @@ import DelayLink from 'react-delay-link';
 import Couple from "../images/Now/couple.gif";
 import Hand from "../images/Now/hand.gif";
 import Blank from "../images/Now/blank.png";
+import Scan from "../images/Now/scan.jpg";
 import moment from "moment";
 
 export default class Now extends Component {
@@ -20,7 +21,8 @@ export default class Now extends Component {
             dueInDays: 0,
             progressBarDone: false,
             progressBarWidthSet: false,
-            shareOpen: false
+            shareOpen: false,
+            scanOpen: false
         };
     }
 
@@ -63,7 +65,15 @@ export default class Now extends Component {
     
     toggleShare(context) {
         context.setState({
-            shareOpen: !context.state.shareOpen
+            shareOpen: !context.state.shareOpen,
+            scanOpen: false
+        });
+    }
+
+    toggleScan(context) {
+        context.setState({
+            scanOpen: !context.state.scanOpen,
+            shareOpen: false
         });
     }
    
@@ -77,6 +87,9 @@ export default class Now extends Component {
                 }} className="">
                     <img src={Couple} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
                     <img src={Hand} className={"hand "+(this.state.stageReady ? "animate" : "")} />
+                    <img src={Blank} className={"scene-animatable clickable "+(this.state.stageReady ? "animate" : "")} 
+                        onClick={() => this.toggleScan(this)}
+                    />
                     <div className={"progress-bar-container rest-top "+(this.state.stageReady ? "animate" : "")} >
                         <p className={"loading-title"}>
                             <span className={"loading-out "+(this.state.stageReady ? "animate" : "")}>
@@ -105,35 +118,38 @@ export default class Now extends Component {
                                     Share this site with your friends
                                 </p>                            
                                 <section class="icon-list">
-                                    <a href="">
-                                        <i class="nes-icon twitter is-large"></i>
-                                    </a>
+                                    <a href="https://twitter.com/home?status=https://loading.mckirgan.com/" 
+                                        className="nes-icon twitter is-medium"></a>
 
-                                    <a href="">
-                                        <i class="nes-icon facebook is-large"></i>
-                                    </a>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://loading.mckirgan.com/" 
+                                        className="nes-icon facebook is-medium"></a>
                                     
-                                    <a href="">
-                                        <i class="nes-icon linkedin is-large"></i>
-                                    </a>
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://loading.mckirgan.com/&title=&summary=&source=" 
+                                        className="nes-icon linkedin is-medium"></a>
 
-                                    <a href="">
-                                        <i class="nes-icon reddit is-large"></i>
-                                    </a>
+                                    <a href="http://www.reddit.com/submit?url=https://loading.mckirgan.com" 
+                                        className="nes-icon reddit is-medium"></a>
 
-                                    <a href="">
-                                        <i class="nes-icon whatsapp is-large"></i>
-                                    </a>
+                                    <a href="https://api.whatsapp.com/send?text=https%3A%2F%2Floading.mckirgan.com" 
+                                        className="nes-icon whatsapp is-medium"></a>
                                 </section>    
-                                {/* <Button primary="true" style={{
-                                    "margin-right":  "left"
-                                }} onClick={() => this.toggleShare(this)}>
-                                    Close
-                                </Button>                     */}
                             </Balloon>
                         </div>) 
                         : ''
                     }
+                    {this.state.scanOpen ? 
+                        (<div className={"share-modal "+(this.state.shareOpen ? "open" : "")} >
+                            <Balloon  className={""}>
+                                <div className="row col-xs-12">
+                                    <img src={Scan} className="baby-scan " 
+                                        onClick={() => this.toggleScan(this)}
+                                    />
+                                </div>
+                            </Balloon>
+                        </div>) 
+                        : ''
+                    }
+
                 </div>
 
                 <NesContainer title="November 2020" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
@@ -160,7 +176,7 @@ export default class Now extends Component {
                         <Button primary="true" className="float-right" style={{
                             "margin-right":  "left"
                         }} onClick={() => this.toggleShare(this)}>
-                            {this.state.shareOpen ? "Close share" : "Share"}
+                            {this.state.shareOpen ? "Close" : "Share"}
                         </Button>
                     </div>
                 </div>                
