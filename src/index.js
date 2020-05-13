@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import {withRouter, BrowserRouter, Route} from 'react-router-dom';
 import App from './App';
 import './sass/App.css';
-// const SomeComponent = withRouter(props => <MyComponent {...props}/>);
-
-// let AppWithRouter = withRouter(props => <App {...props}/>);
+import { CookiesProvider } from 'react-cookie';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Route path="/" component={App}/>
-  </BrowserRouter>,
+  <CookiesProvider>
+    <BrowserRouter>
+      <Route path="/" component={App}/>
+    </BrowserRouter>
+  </CookiesProvider>,
+    
   document.getElementById('root')
 );

@@ -6,7 +6,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 import Meet from "./routes/Meet";
 import Engagement from "./routes/Engagement";
@@ -15,23 +16,40 @@ import House from "./routes/House";
 import Virus from "./routes/Virus";
 import Baby from "./routes/Baby";
 import Now from "./routes/Now";
-// import ErrorNotFound from "./routes/404";
-import Background from "./images/background.png";
+import { withCookies, Cookies } from 'react-cookie';
 
 class App extends Component {
 
   state = {
-    devMenuOpen: false
+    devMenuOpen: false,
+    hasLanded: true
   }
 
   constructor(props) {
     super(props);
-    // const {pathname} = props.location;
-    // console.log(pathname);
+  }
+
+  componentDidMount() {
+    const { cookies } = this.props;
+    let hasLanded = cookies.get('landed');
+
+    if(hasLanded != "hasHanded") {
+      cookies.set("landed", "hasHanded");
+      this.setState({
+        hasLanded: false
+      })      
+    } else {
+      this.setState({
+        hasLanded: true
+      })
+    }
+  }
+
+  redirectCookie() {
+    return (this.state.hasLanded == false) ? <Redirect to="/" /> : null;
   }
 
   render() {
-    console.log(this.props)
 
     return (
       <div className="App" style={{
@@ -42,51 +60,12 @@ class App extends Component {
         height: "100%",
 
       }}>
-
+        
         <Router>
-          {/* <div style={{
-              position: "fixed",
-              top: 0,
-              right: 0,
-              textAlign: "right"
-            }}>
-            <button onClick={() => {this.setState({devMenuOpen: !this.state.devMenuOpen})}}>
-              {this.state.devMenuOpen ? '=' : 'X'}
-            </button>
-            <div>
-                  <nav style={{
-                    display: this.state.devMenuOpen ? '' : 'none'
-                  }}>
-                    <ul>
-                      <li>
-                        <Link to="/meet">Meet</Link>
-                      </li>
-                      <li>
-                        <Link to="/engagement">Engagement</Link>
-                      </li>
-                      <li>
-                        <Link to="/wedding">Wedding</Link>
-                      </li>
-                      <li>
-                        <Link to="/house">House</Link>
-                      </li>                    
-                      <li>
-                        <Link to="/virus">Virus</Link>
-                      </li>                    
-                      <li>
-                        <Link to="/now">Now</Link>
-                      </li>
-                      <li>
-                        <Link to="/404">404</Link>
-                      </li>                      
-                    </ul>
-                  </nav>
-                                       
-            </div>
-          </div> */}
               <Switch>
                 <Route path="/about">
                   <div className="app-wrapper">
+                    {this.redirectCookie()}
                       <div className="route-outer-wrapper">
                         <div className="route-inner-wrapper">                  
                           <About />
@@ -96,6 +75,7 @@ class App extends Component {
                 </Route>
                 <Route path="/users">
                   <div className="app-wrapper">
+                    {this.redirectCookie()}
                     <div className="route-outer-wrapper">
                       <div className="route-inner-wrapper">                  
                         <Users />
@@ -105,6 +85,7 @@ class App extends Component {
                 </Route>
                 <Route path="/meet">
                   <div className="app-wrapper">
+                    {this.redirectCookie()}
                     <div className="route-outer-wrapper">
                       <div className="route-inner-wrapper">                  
                         <Meet />     
@@ -114,6 +95,7 @@ class App extends Component {
                 </Route>
                 <Route path="/engagement">
                   <div className="app-wrapper">
+                    {this.redirectCookie()}
                     <div className="route-outer-wrapper">
                       <div className="route-inner-wrapper">                  
                       <Engagement />
@@ -123,6 +105,7 @@ class App extends Component {
                 </Route>
                 <Route path="/Wedding">
                   <div className="app-wrapper">
+                    {this.redirectCookie()}
                     <div className="route-outer-wrapper">
                       <div className="route-inner-wrapper">                  
                         <Wedding />
@@ -132,6 +115,7 @@ class App extends Component {
                 </Route>
                 <Route path="/house">
                   <div className="app-wrapper">
+                    {this.redirectCookie()}
                     <div className="route-outer-wrapper">
                       <div className="route-inner-wrapper">                  
                         <House />
@@ -141,6 +125,7 @@ class App extends Component {
                 </Route>
                 <Route path="/virus">
                   <div className="app-wrapper dark-animate">
+                    {this.redirectCookie()}
                     <div className="route-outer-wrapper">
                       <div className="route-inner-wrapper">                  
                         <Virus />
@@ -150,6 +135,7 @@ class App extends Component {
                 </Route>                
                 <Route path="/now">
                   <div className="app-wrapper light-animate">
+                    {this.redirectCookie()}
                     <div className="route-outer-wrapper">
                       <div className="route-inner-wrapper">                  
                         <Now />
@@ -159,6 +145,7 @@ class App extends Component {
                 </Route>                                                                
                 <Route path="/">
                   <div className="app-wrapper">
+                    {this.redirectCookie()}
                     <div className="route-outer-wrapper">
                       <div className="route-inner-wrapper">                  
                         <Meet />
@@ -184,4 +171,4 @@ function Users() {
   return <h2>Users</h2>;
 }
 
-export default App;
+export default withCookies(App);

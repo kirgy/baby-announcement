@@ -8,6 +8,7 @@
     "radium": "^0.26.0",
     "react": "^16.13.1",
     "react-confetti": "^5.0.1",
+    "react-cookie": "^4.0.3",
     "react-delay-link": "^1.1.4",
     "react-dinosaur-game": "^1.0.0",
     "react-dom": "^16.13.1",
