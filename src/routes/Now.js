@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { Container as NesContainer, Button} from "nes-react";
+import { Container as NesContainer, Button, Balloon} from "nes-react";
 import '../sass/App.css';
 import {
     BrowserRouter as Router,
     Link
 } from "react-router-dom";
 import DelayLink from 'react-delay-link';
-import Couple from "../images/Now/couple.png";
+import Couple from "../images/Now/couple.gif";
+import Hand from "../images/Now/hand.png";
+import Blank from "../images/Now/blank.png";
 import moment from "moment";
 
 export default class Now extends Component {
@@ -17,7 +19,8 @@ export default class Now extends Component {
             stageReady: false,
             dueInDays: 0,
             progressBarDone: false,
-            progressBarWidthSet: false
+            progressBarWidthSet: false,
+            shareOpen: false
         };
     }
 
@@ -57,7 +60,13 @@ export default class Now extends Component {
             showChars: false
         });
     }
-        
+    
+    toggleShare(context) {
+        context.setState({
+            shareOpen: !context.state.shareOpen
+        });
+    }
+   
     render() {
         return (
             <div style={{
@@ -67,9 +76,20 @@ export default class Now extends Component {
                     position: "relative",
                 }} className="">
                     <img src={Couple} className={"scene-base couple "+(this.state.stageReady ? "animate" : "")} />
+                    <img src={Hand} className={"hand "+(this.state.stageReady ? "animate" : "")} />
+                    <div className={"hand-pulse "+(this.state.stageReady ? "animate" : "")}>
+                        <img src={Blank}/>
+                    </div>
                     <div className={"progress-bar-container rest-top "+(this.state.stageReady ? "animate" : "")} >
-                        <p className={"loading-title "+(this.state.stageReady ? "animate" : "")} >
-                            Loading...<span className={"days-remaining  "+(this.state.stageReady ? "animate" : "")} >{this.state.dueInDays} days remaining</span>
+                        <p className={"loading-title"}>
+                            <span className={"loading-out "+(this.state.stageReady ? "animate" : "")}>
+                                <span className={"loading-in "+(this.state.stageReady ? "animate" : "")}>
+                                    Loading...
+                                </span>
+                            </span>
+                            <span className={"days-remaining  "+(this.state.stageReady ? "animate" : "")} >
+                                {this.state.dueInDays} days remaining
+                            </span>
                         </p>
                         <div className={"progress-bar "+(this.state.stageReady ? "animate" : "")} >
                             {(!this.state.progressBarDone) 
@@ -80,6 +100,43 @@ export default class Now extends Component {
                             }
                         </div>
                     </div>
+
+                    {this.state.shareOpen ? 
+                        (<div className={"share-modal "+(this.state.shareOpen ? "open" : "")} >
+                            <Balloon  className={""}>
+                                <p>
+                                    Share this site with your friends
+                                </p>                            
+                                <section class="icon-list">
+                                    <a href="">
+                                        <i class="nes-icon twitter is-large"></i>
+                                    </a>
+
+                                    <a href="">
+                                        <i class="nes-icon facebook is-large"></i>
+                                    </a>
+                                    
+                                    <a href="">
+                                        <i class="nes-icon linkedin is-large"></i>
+                                    </a>
+
+                                    <a href="">
+                                        <i class="nes-icon reddit is-large"></i>
+                                    </a>
+
+                                    <a href="">
+                                        <i class="nes-icon whatsapp is-large"></i>
+                                    </a>
+                                </section>    
+                                {/* <Button primary="true" style={{
+                                    "margin-right":  "left"
+                                }} onClick={() => this.toggleShare(this)}>
+                                    Close
+                                </Button>                     */}
+                            </Balloon>
+                        </div>) 
+                        : ''
+                    }
                 </div>
 
                 <NesContainer title="November 2020" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
@@ -103,13 +160,11 @@ export default class Now extends Component {
                         </DelayLink>
                     </div>
                     <div className="button-wrapper float-right">
-                        <DelayLink delay={2000} to="/" replace={false} className="float-right">
-                            <Button primary="true" style={{
-                                "margin-right":  "left"
-                            }} onClick={() => this.navAction(this)}>
-                                Share
-                            </Button>
-                        </DelayLink>
+                        <Button primary="true" className="float-right" style={{
+                            "margin-right":  "left"
+                        }} onClick={() => this.toggleShare(this)}>
+                            {this.state.shareOpen ? "Close" : "Open"}
+                        </Button>
                     </div>
                 </div>                
             </div>

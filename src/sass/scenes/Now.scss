@@ -12,6 +12,10 @@
     $animation-progress-duration: 1s;
     $animation-progress-start: 0s;
 
+    // loading in
+    $animation-loading-in-duration: 1s;
+    $animation-loading-in-start: 0s;    
+
     // progress bar meter
     $animation-progress-meter-duration: 12s;
     $animation-progress-meter-start: 3s;
@@ -19,6 +23,14 @@
     // progress bar meter final
     $animation-progress-meter-final-duration: 1s;
     $animation-progress-meter-final-start: $animation-progress-meter-duration + $animation-progress-meter-start;
+
+    // loading text
+    $animation-loading-text-duration: 1s;
+    $animation-loading-text-start: $animation-progress-meter-final-start + $animation-progress-meter-final-duration;
+    
+    // loading out
+    $animation-loading-text-out-duration: 1s;
+    $animation-loading-text-out-start: $animation-progress-meter-final-start + $animation-progress-meter-final-duration - 1s;
 
     // days remaining
     $animation-days-remaining-duration: 1s;
@@ -39,6 +51,10 @@
     // cta
     $animation-cta-duration: 1s;    
     $animation-cta-start: $animation-caption-start + $animation-caption-duration + 2s;
+
+    // hand
+    $animation-hand-duration: 1s;
+    $animation-hand-start: $animation-caption-start + $animation-caption-duration + 2s;;
     
     .couple {
       width: 100%;
@@ -67,16 +83,29 @@
     }
 
     .loading-title {
-        opacity: 0;
+        text-align: center;
 
-        &.animate {
-            animation: pokeFadeIn $animation-loading-text-duration forwards;
-            animation-delay: $animation-loading-text-start;
+        .loading-in {
+            opacity: 0;
+            display: none;
+
+            &.animate {
+                animation: pokeFadeInDisplayNone $animation-loading-in-duration forwards;
+                animation-delay: $animation-loading-in-start;
+            }
+        }
+
+        .loading-out {
+            opacity: 1;
+
+            &.animate {
+                animation: pokeFadeOutDisplayNone $animation-loading-text-out-duration forwards;
+                animation-delay: $animation-loading-text-out-start;
+            }
         }
 
         .days-remaining {
             opacity: 0;
-
             &.animate {
                 animation: pokeFadeIn $animation-days-remaining-duration forwards;
                 animation-delay: $animation-days-remaining-start;
@@ -157,6 +186,65 @@
       }
     }
 
+    .hand {
+        opacity: 0;
+        width: 10%;
+        left: 49%;
+        bottom: 5%;
+        position: absolute;
+
+        &.animate {
+          animation: pokeFadeIn $animation-hand-duration forwards;
+          animation-delay: $animation-hand-start;
+        }
+      }
+
+    .hand-pulse {
+        opacity: 0;
+        position: absolute;
+        left: 46%;
+        bottom: 10%;
+        width: 10%;
+        border-radius: 45px;
+        animation: animationPulse $animation-hand-duration infinite;
+        animation-delay: $animation-hand-start;
+
+        &.animate {
+            animation: pokeFadeIn $animation-hand-duration forwards;
+            animation-delay: $animation-hand-start;
+        }
+    }
+
+    .share-modal {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #fff;
+        padding-right: 1em;
+
+        .nes-balloon {
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon-list {
+            margin-bottom: 1em;
+
+            a {
+                margin: 0.5em;
+                
+                &:first-child {
+                    margin-left:0;
+                }
+
+                &:last-child {
+                    margin-right:0;
+                }                
+            }
+        }
+    }
 
     @keyframes animateProgress {
         0% {
@@ -201,5 +289,118 @@
             margin-top: 0;
         }                        
     }    
-  }  
-  
+
+    @keyframes pokeFadeOutDisplayNone {          
+        0% {
+            filter: contrast(1) brightness(1);
+            opacity: 1;
+          }
+        
+          24% {
+            filter: contrast(1) brightness(1);
+            opacity: 1;
+          }  
+          25% {
+            filter: contrast(0.5) brightness(1.5);
+            opacity: 0.75;
+          }
+        
+        
+          49% {
+            filter: contrast(0.5) brightness(1.5);
+            opacity: 0.75;
+          }  
+          50% {
+            filter: contrast(0.25) brightness(2);
+            opacity: 0.5;
+          }
+        
+        
+          74% {
+            filter: contrast(0.25) brightness(2);
+            opacity: 0.5;
+          }  
+          75% {
+            filter: contrast(0.175) brightness(2);
+            opacity: 0.25;
+          }  
+        
+          94% {
+            filter: contrast(0.175) brightness(2);
+            opacity: 0.25;
+          }
+          95% {
+            filter: contrast(0) brightness(3);
+            opacity: 0;
+            position: inherit;
+          }
+          100% {
+            filter: contrast(0) brightness(3);
+            opacity: 0;
+            position: fixed;
+          }         
+    }    
+
+    @keyframes pokeFadeInDisplayNone {
+        0% {
+            display: inherit;
+            filter: contrast(0) brightness(3);
+            opacity: 0;
+        }      
+        24% {
+            filter: contrast(0.175) brightness(2);
+            opacity: 0.25;
+        }
+    
+        25% {
+            filter: contrast(0.175) brightness(2);
+            opacity: 0.25;
+        }  
+        49% {
+            filter: contrast(0.25) brightness(2);
+            opacity: 0.5;
+        }      
+        50% {
+            filter: contrast(0.25) brightness(2);
+            opacity: 0.5;
+        }      
+        74% {
+            filter: contrast(0.5) brightness(1.5);
+            opacity: 0.75;
+        }        
+        75% {
+            filter: contrast(0.5) brightness(1.5);
+            opacity: 0.75;
+        }      
+        94% {
+            filter: contrast(1) brightness(1);
+            opacity: 1;
+        }    
+        95% {
+          filter: contrast(1) brightness(1);
+          opacity: 1;
+        }
+        100% {
+          filter: contrast(1) brightness(1);
+          opacity: 1;
+        }    
+    }
+
+    @keyframes animationPulse {
+        0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(33, 156, 238, 0.7);
+        }
+
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(33, 156, 238, 0);
+        }
+
+        100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(33, 156, 238, 0);
+        }    
+    }
+    
+}  
