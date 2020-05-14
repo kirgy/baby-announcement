@@ -1,6 +1,7 @@
 {
   "name": "baby-announcement",
   "version": "0.1.0",
+  "homepage": "https://loading.mckirgan.com",
   "private": true,
   "dependencies": {
     "moment": "^2.25.3",
