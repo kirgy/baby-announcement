@@ -113,10 +113,7 @@ export default class Now extends Component {
 
                     {this.state.shareOpen ? 
                         (<div className={"share-modal "+(this.state.shareOpen ? "open" : "")} >
-                            <Balloon  className={""}>
-                                <p>
-                                    Share this site with your friends
-                                </p>                            
+                            <Balloon  className={""}>                
                                 <section class="icon-list">
                                     <a href="https://twitter.com/home?status=https://loading.mckirgan.com/" 
                                         className="nes-icon twitter is-medium"></a>
@@ -132,6 +129,9 @@ export default class Now extends Component {
 
                                     <a href="https://api.whatsapp.com/send?text=https%3A%2F%2Floading.mckirgan.com" 
                                         className="nes-icon whatsapp is-medium"></a>
+                                    <p>
+                                        This site was built by <a href="https://mckirgan.com">Chris McKirgan</a>, a software engineer from Bristol, UK in celebration their baby-in-progress.
+                                    </p>
                                 </section>    
                             </Balloon>
                         </div>) 
