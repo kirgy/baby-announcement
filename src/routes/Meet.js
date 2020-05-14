@@ -55,7 +55,7 @@ export default class Meet extends Component {
 
                 <NesContainer title="2008" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
-                        It all started when we met online. It took 6 months before we got the courage to meet up in person. #swippingRight
+                        It all started when we met online. It took 6 months before we got the courage to meet up in person. #swipingRight
                     </p>
                 </NesContainer>
                 <div style={{
