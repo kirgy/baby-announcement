@@ -52,7 +52,7 @@ export default class Engagement extends Component {
 
                 <NesContainer title="2012" className={"text-caption caption "+(this.state.stageReady ? "animate" : "")}>
                     <p>
-                        After 4 years we decided we we're the humans we wanted to spend our lives with.
+                        After 4 years we decided we were the humans we wanted to spend our lives with.
                     </p>
                 </NesContainer>
                 <div style={{

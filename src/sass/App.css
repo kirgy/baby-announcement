@@ -555,8 +555,9 @@
   margin-right: 0; }
 
 .scene-now .baby-scan {
-  width: 50%;
-  margin: 0 auto; }
+  width: 100%;
+  margin: 0 auto;
+  overflow: scroll; }
 
 @keyframes animateProgress {
   0% {
