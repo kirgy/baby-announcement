@@ -63,7 +63,7 @@ class App extends Component {
         
         <Router>
               <Switch>
-                <Route path="/about">
+                <Route path="/about" exact>
                   <div className="app-wrapper">
                     {this.redirectCookie()}
                       <div className="route-outer-wrapper">
@@ -73,17 +73,7 @@ class App extends Component {
                       </div>
                     </div>
                 </Route>
-                <Route path="/users">
-                  <div className="app-wrapper">
-                    {this.redirectCookie()}
-                    <div className="route-outer-wrapper">
-                      <div className="route-inner-wrapper">                  
-                        <Users />
-                      </div>
-                    </div>                              
-                  </div>                              
-                </Route>
-                <Route path="/meet">
+                <Route path="/meet" exact>
                   <div className="app-wrapper">
                     {this.redirectCookie()}
                     <div className="route-outer-wrapper">
@@ -93,7 +83,7 @@ class App extends Component {
                     </div>
                   </div>
                 </Route>
-                <Route path="/engagement">
+                <Route path="/engagement" exact>
                   <div className="app-wrapper">
                     {this.redirectCookie()}
                     <div className="route-outer-wrapper">
@@ -103,7 +93,7 @@ class App extends Component {
                     </div>
                   </div>
                 </Route>
-                <Route path="/Wedding">
+                <Route path="/wedding" exact>
                   <div className="app-wrapper">
                     {this.redirectCookie()}
                     <div className="route-outer-wrapper">
@@ -113,7 +103,7 @@ class App extends Component {
                     </div>
                   </div>
                 </Route>
-                <Route path="/house">
+                <Route path="/house" exact>
                   <div className="app-wrapper">
                     {this.redirectCookie()}
                     <div className="route-outer-wrapper">
@@ -123,7 +113,7 @@ class App extends Component {
                     </div>
                   </div>
                 </Route>
-                <Route path="/virus">
+                <Route path="/virus" exact>
                   <div className="app-wrapper dark-animate">
                     {this.redirectCookie()}
                     <div className="route-outer-wrapper">
@@ -133,7 +123,7 @@ class App extends Component {
                     </div>
                   </div>
                 </Route>                
-                <Route path="/now">
+                <Route path="/now" exact>
                   <div className="app-wrapper light-animate">
                     {this.redirectCookie()}
                     <div className="route-outer-wrapper">
@@ -143,7 +133,7 @@ class App extends Component {
                     </div>
                   </div>
                 </Route>                                                                
-                <Route path="/">
+                <Route path="/" exact>
                   <div className="app-wrapper">
                     {this.redirectCookie()}
                     <div className="route-outer-wrapper">
