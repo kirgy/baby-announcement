@@ -98,14 +98,14 @@ export default class Now extends Component {
                                 </span>
                             </span>
                             <span className={"days-remaining  "+(this.state.stageReady ? "animate" : "")} >
-                                {this.state.dueInDays} days remaining
+                                {(this.state.dueInDays < 1) ? `Baby is here!` : `${this.state.dueInDays} days remaining...`}
                             </span>
                         </p>
                         <div className={"progress-bar "+(this.state.stageReady ? "animate" : "")} >
                             {(!this.state.progressBarDone) 
                                 ? (<div className="progress-meter" />)
                                 : <div className="progress-meter-final" style={{
-                                    width: (this.state.progressBarWidthSet) ? (((280-this.state.dueInDays)/280) *100)+"%" : "0%",
+                                    width: (this.state.progressBarWidthSet) ? Math.floor(((280-this.state.dueInDays)/280) *100)+"%" : "0%",
                                 }}/>
                             }
                         </div>
