@@ -2,7 +2,7 @@ name: Push to Amazon ECR
 
 on:
   push:
-    branches: [ 'feature/**' ]
+    branches: [ 'master' ]
 
 jobs:
   build:
