@@ -2,7 +2,7 @@ name: Push to Amazon ECR
 
 on:
   push:
-    branches: [ 'master' ]
+    branches: [ 'feature/**' ]
 
 jobs:
   build:
@@ -20,3 +20,14 @@ jobs:
         secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         region: ${{ secrets.AWS_REGION }}
         image: ${{ secrets.AWS_ECR_TAG }}:latest
+  redeploy:
+      name: Continuous Deployment
+      runs-on: ubuntu-18.04
+      
+      needs: [docker]
+      steps:
+        - name: Deploy docker container webhook
+          uses: joelwmale/webhook-action@master
+          env:
+            WEBHOOK_URL: ${{ secrets.WEBHOOK_PROD_DEPLOY_URL  }}
+            data: "{ 'pass': '${{ secrets.WEBHOOK_PROD_DEPLOY_PASS }}'}"
