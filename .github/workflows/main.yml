@@ -24,7 +24,7 @@ jobs:
       name: Continuous Deployment
       runs-on: ubuntu-18.04
       
-      needs: [docker]
+      needs: [build]
       steps:
         - name: Deploy docker container webhook
           uses: joelwmale/webhook-action@master
