@@ -1,4 +1,6 @@
-# Baby Announcement
+# Baby Announcement React Native site
+
+![Deployment](https://github.com/kirgy/baby-announcement/actions/workflows/main.yml/badge.svg)
 
 This project uses react, react-router-dom, nes-css and some CSS animations to create a pokemon-style microsite, used for our baby announcement.
 
