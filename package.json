@@ -4,7 +4,7 @@
   "homepage": "https://loading.mckirgan.com",
   "private": true,
   "dependencies": {
-    "moment": "^2.25.3",
+    "moment": "^2.29.2",
     "nes-react": "^1.0.2",
     "radium": "^0.26.0",
     "react": "^16.13.1",
