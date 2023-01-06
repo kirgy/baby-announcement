@@ -14,7 +14,7 @@
     "react-dinosaur-game": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "0.9.x",
+    "react-scripts": "5.0.x",
     "react-transition-group": "^1.2.1",
     "react-typist": "^2.0.5",
     "url-loader": "^4.1.0"
